@@ -4,61 +4,75 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>مشويات العربي - ELARABY | 01015861991</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Cairo',sans-serif;background:#0a0a0a;color:#fff}
+body{font-family:'Cairo',sans-serif;background:#0a0a0a;color:#fff;line-height:1.8;letter-spacing:.2px}
 :root{--gold:#e2a63a;--red:#9b1c1c}
-.header{position:sticky;top:0;z-index:100;background:#000;border-bottom:2px solid var(--gold);padding:12px 16px;display:flex;justify-content:space-between;align-items:center}
-.logo{width:88px;height:88px;background:radial-gradient(#fff,#e9d5b0);border:4px solid var(--red);border-radius:18%;display:grid;place-items:center}
-.logo b{color:var(--red);font-size:13px;text-align:center}
-.cart-btn{background:linear-gradient(135deg,var(--gold),#c8870a);color:#000;padding:10px 18px;border-radius:30px;font-weight:900;border:none;display:flex;gap:8px;cursor:pointer}
+.header{position:sticky;top:0;z-index:100;background:rgba(0,0,0,.95);backdrop-filter:blur(10px);border-bottom:2px solid var(--gold);padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
+.logo{width:92px;height:92px;background:radial-gradient(#fff,#e9d5b0);border:4px solid var(--red);border-radius:20%;display:grid;place-items:center;box-shadow:0 4px 20px rgba(226,166,58,.3)}
+.logo b{color:var(--red);font-size:13px;text-align:center;line-height:1.2}
+.cart-btn{background:linear-gradient(135deg,var(--gold),#c8870a);color:#000;padding:12px 20px;border-radius:30px;font-weight:900;border:none;display:flex;gap:8px;cursor:pointer;font-size:14px}
 .cart-count{background:#000;color:var(--gold);border-radius:50%;width:22px;height:22px;display:grid;place-items:center;font-size:12px}
-.hero{background:radial-gradient(600px at 50% -50px,rgba(226,166,58,.25),transparent),#000;padding:34px 20px;text-align:center;border-bottom:1px solid #222}
-.hero h1{font-size:38px;font-weight:900}
+.hero{background:radial-gradient(700px at 50% -80px,rgba(226,166,58,.22),transparent),#000;padding:48px 20px 36px;text-align:center;border-bottom:1px solid #222}
+.hero h1{font-size:42px;font-weight:900;line-height:1.3;margin-bottom:12px}
 .hero h1 span{color:var(--gold)}
-.tabs{display:flex;gap:10px;overflow:auto;padding:14px;background:#0f0f0f;border-bottom:1px solid #222;position:sticky;top:68px;z-index:90}
-.tab{white-space:nowrap;padding:10px 22px;border-radius:30px;border:1.5px solid var(--gold);background:#1a1a1a;color:var(--gold);font-weight:800;cursor:pointer}
-.tab.active{background:linear-gradient(135deg,var(--gold),#c8870a);color:#000}
-.section{display:none;padding:14px}
+.hero p{color:#bbb;font-size:16px;margin-top:10px;letter-spacing:.3px}
+.tabs{display:flex;gap:12px;overflow:auto;padding:16px 14px;background:#0f0f0f;border-bottom:1px solid #222;position:sticky;top:78px;z-index:90}
+.tab{white-space:nowrap;padding:12px 24px;border-radius:30px;border:1.5px solid var(--gold);background:#1a1a1a;color:var(--gold);font-weight:800;cursor:pointer;font-size:14px;transition:.2s}
+.tab.active{background:linear-gradient(135deg,var(--gold),#c8870a);color:#000;transform:scale(1.05)}
+.section{display:none;padding:18px 14px}
 .section.active{display:block}
-.menu-card,.sand-card{display:grid;grid-template-columns:78px 1fr 108px;background:linear-gradient(90deg,#1b0f0f,#171717);border:1px solid rgba(226,166,58,.35);border-radius:14px;overflow:hidden;margin-bottom:12px}
-.price-tag,.sand-price{background:linear-gradient(135deg,#6e1313,#c41e1e);display:grid;place-items:center;color:#fff;font-weight:900;line-height:.9;padding:8px}
-.price-tag b,.sand-price b{font-size:24px}
-.price-tag span,.sand-price span{font-size:11px;color:var(--gold)}
-.menu-info,.sand-info{padding:10px 12px}
-.menu-info h3,.sand-info h3{font-size:16px;font-weight:800}
-.menu-info p{font-size:11px;color:#aaa;margin-top:3px;line-height:1.3}
-.menu-img{width:108px;height:100%;background:#222}
+.section-head{margin:18px 4px 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px dashed rgba(226,166,58,.4);padding-bottom:14px}
+.section-head h2{font-size:28px;font-weight:900;letter-spacing:.3px}
+.menu-card,.sand-card{display:grid;grid-template-columns:82px 1fr 112px;background:linear-gradient(180deg,#1d1111,#161616);border:1px solid rgba(226,166,58,.35);border-radius:16px;overflow:hidden;margin-bottom:16px;box-shadow:0 6px 24px rgba(0,0,0,.5);transition:.2s}
+.menu-card:hover,.sand-card:hover{transform:translateY(-2px);border-color:var(--gold)}
+.price-tag,.sand-price{background:linear-gradient(135deg,#6e1313,#c41e1e);display:grid;place-items:center;color:#fff;font-weight:900;line-height:1;padding:12px 8px}
+.price-tag b,.sand-price b{font-size:26px;display:block}
+.price-tag span,.sand-price span{font-size:12px;color:var(--gold);margin-top:4px}
+.menu-info,.sand-info{padding:16px 14px}
+.menu-info h3,.sand-info h3{font-size:18px;font-weight:800;margin-bottom:6px;letter-spacing:.2px}
+.menu-info p{font-size:13px;color:#aaa;line-height:1.7;margin-top:6px}
+.menu-img{width:112px;height:100%;min-height:110px;background:#222}
 .menu-img img{width:100%;height:100%;object-fit:cover}
-.qty-controls{display:flex;align-items:center;gap:6px;margin-top:8px}
-.q-btn{width:28px;height:28px;border-radius:50%;border:1px solid var(--gold);background:#000;color:var(--gold);font-weight:900;cursor:pointer}
-.q-num{min-width:24px;text-align:center;font-weight:800}
-.add-btn{margin-top:6px;background:linear-gradient(90deg,var(--gold),#ffbf4d);color:#000;border:none;padding:6px 12px;border-radius:20px;font-weight:900;font-size:12px;cursor:pointer}
-.cart-drawer{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:200;display:none}
+.qty-controls{display:flex;align-items:center;gap:8px;margin-top:14px;flex-wrap:wrap}
+.q-btn{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--gold);background:#000;color:var(--gold);font-weight:900;cursor:pointer;font-size:16px}
+.q-num{min-width:28px;text-align:center;font-weight:800;font-size:16px}
+.add-btn{background:linear-gradient(90deg,var(--gold),#ffbf4d);color:#000;border:none;padding:8px 16px;border-radius:24px;font-weight:900;font-size:13px;cursor:pointer}
+.phone-bar{background:linear-gradient(90deg,#111,#1a1000);border:1.5px solid var(--gold);border-radius:40px;padding:10px 20px;display:inline-flex;gap:10px;align-items:center;margin-top:16px;color:var(--gold);font-weight:900;cursor:pointer;text-decoration:none;font-size:15px}
+.phone-bar:hover{background:var(--gold);color:#000}
+.call-actions{display:flex;gap:12px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.btn-call{background:linear-gradient(135deg,var(--gold),#c8870a);color:#000;padding:12px 22px;border-radius:30px;font-weight:900;text-decoration:none;display:inline-flex;gap:8px;align-items:center}
+.btn-wa{background:linear-gradient(90deg,#25D366,#128C7E);color:#fff;padding:12px 22px;border-radius:30px;font-weight:900;text-decoration:none;display:inline-flex;gap:8px;align-items:center}
+.cart-drawer{position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:200;display:none}
 .cart-drawer.open{display:block}
-.cart-panel{position:absolute;left:0;top:0;bottom:0;width:92%;max-width:380px;background:#111;border-right:2px solid var(--gold);padding:18px;overflow:auto}
-.cart-item{display:flex;justify-content:space-between;border-bottom:1px dashed #333;padding:10px 0}
-.total-box{margin-top:14px;background:#1a1a1a;padding:12px;border-radius:10px;border:1px solid var(--gold)}
-.order-btn{width:100%;margin-top:12px;background:linear-gradient(90deg,#25D366,#128C7E);color:#fff;border:none;padding:14px;border-radius:12px;font-weight:900;font-size:16px;cursor:pointer}
-.close-cart{background:#222;color:#fff;border:none;padding:8px 14px;border-radius:20px;cursor:pointer;margin-bottom:10px}
-.badge-new{background:var(--gold);color:#000;font-size:10px;padding:2px 6px;border-radius:10px;margin-right:6px}
-.phone-bar{background:linear-gradient(90deg,#111,#1a0f00);border:1px solid var(--gold);border-radius:30px;padding:8px 16px;display:inline-flex;gap:8px;align-items:center;margin-top:10px;color:var(--gold);font-weight:900}
+.cart-panel{position:absolute;left:0;top:0;bottom:0;width:92%;max-width:400px;background:#111;border-right:2px solid var(--gold);padding:20px;overflow:auto}
+.cart-item{display:flex;justify-content:space-between;border-bottom:1px dashed #333;padding:14px 0;gap:10px}
+.total-box{margin-top:18px;background:#1a1a1a;padding:14px;border-radius:12px;border:1px solid var(--gold);line-height:1.9}
+.order-btn{width:100%;margin-top:14px;background:linear-gradient(90deg,#25D366,#128C7E);color:#fff;border:none;padding:16px;border-radius:14px;font-weight:900;font-size:16px;cursor:pointer;letter-spacing:.3px}
+.close-cart{background:#222;color:#fff;border:none;padding:10px 16px;border-radius:20px;cursor:pointer;margin-bottom:12px}
+.badge-new{background:var(--gold);color:#000;font-size:11px;padding:3px 8px;border-radius:12px;margin-right:6px}
+footer{padding:28px 20px;text-align:center;color:#666;border-top:1px solid #222;margin-top:30px;line-height:2}
+footer b{color:var(--gold)}
 </style>
 </head>
 <body>
 <div class="header">
-<div style="display:flex;align-items:center;gap:10px">
+<div style="display:flex;align-items:center;gap:12px">
 <div class="logo"><div><b>ELARABY<br><small style="font-size:10px;color:#000">AUTHENTIC TASTE</small><br><small style="font-size:11px;color:#9b1c1c">مشويات العربي</small></b></div></div>
-<div><b style="color:var(--gold)">مشويات العربي</b><br><small style="color:#999">طعم أصيل .. جودة بتفرق</small></div>
+<div><b style="color:var(--gold);font-size:17px">مشويات العربي</b><br><small style="color:#999;font-size:13px">طعم أصيل .. جودة بتفرق</small></div>
 </div>
 <button class="cart-btn" onclick="openCart()">🛒 السلة <span class="cart-count" id="cartCount">0</span></button>
 </div>
 
 <div class="hero">
 <h1>الفراخ المشوية <span>على الفحم</span> 🔥</h1>
-<p>اطلب الآن واتساب - اختار الكمية براحتك</p>
-<div class="phone-bar">📞 01015861991 - للطلب والاستفسار</div>
+<p>وجبات فاخرة • فراخ تكا • سندوتشات عيش بلدي<br>اختار الكمية براحتك واطلب وانت في مكانك</p>
+<a href="tel:+201015861991" class="phone-bar">📞 اتصل الآن: 01015861991</a>
+<div class="call-actions">
+<a href="tel:+201015861991" class="btn-call">📞 اتصال للاستفسار</a>
+<a href="https://wa.me/201015861991" target="_blank" class="btn-wa">💬 واتساب للطلب</a>
+</div>
 </div>
 
 <div class="tabs">
@@ -68,28 +82,31 @@ body{font-family:'Cairo',sans-serif;background:#0a0a0a;color:#fff}
 </div>
 
 <div id="grill" class="section active">
-<div class="menu-card" data-name="فرخة تكا" data-price="300"><div class="price-tag"><b>300</b><span>جنيه</span></div><div class="menu-info"><h3>1- فرخة تكا</h3><p>فرخة متقطعة أربع قطع + تتبيلة الفراخ بمذاق خاص + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة للسلة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?q=80&w=300"></div></div>
-<div class="menu-card" data-name="فرخة شيش" data-price="320"><div class="price-tag"><b>320</b><span>جنيه</span></div><div class="menu-info"><h3>2- فرخة شيش</h3><p>فرخة متقطع 12 قطعه + تتبيلة الفراخ بمذاق خاص + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?q=80&w=300"></div></div>
-<div class="menu-card" data-name="فرخة مخلية" data-price="320"><div class="price-tag"><b>320</b><span>جنيه</span></div><div class="menu-info"><h3>3- فرخة مخلية</h3><p>فرخة مخليه من العظم + تتبيلة الفراخ بمذاق خاص + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=300"></div></div>
-<div class="menu-card" data-name="فرخة شيش طاووق" data-price="380"><div class="price-tag"><b>380</b><span>جنيه</span></div><div class="menu-info"><h3>4- فرخة شيش طاووق</h3><p>قطع فراخ مخلية من الورك + تتبيلة الشيش طاووق الخاصة + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=300"></div></div>
-<div class="menu-card" data-name="بانية مشوي" data-price="390"><div class="price-tag"><b>390</b><span>جنيه</span></div><div class="menu-info"><h3>5- بانية مشوي</h3><p>شرائح الفراخ من الصدور المخليه + تتبيلة بمذاق خاص + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1611270632387-84f8a1d2f2b1?q=80&w=300"></div></div>
+<div class="section-head"><h2>الفراخ المشوية على الفحم</h2><span>🔥</span></div>
+<div class="menu-card" data-name="فرخة تكا" data-price="300"><div class="price-tag"><b>300</b><span>جنيه</span></div><div class="menu-info"><h3>1 - فرخة تكا</h3><p>فرخة متقطعة أربع قطع + تتبيلة الفراخ بمذاق خاص + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة للسلة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?q=80&w=300"></div></div>
+<div class="menu-card" data-name="فرخة شيش" data-price="320"><div class="price-tag"><b>320</b><span>جنيه</span></div><div class="menu-info"><h3>2 - فرخة شيش</h3><p>فرخة متقطع 12 قطعه + تتبيلة الفراخ بمذاق خاص + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?q=80&w=300"></div></div>
+<div class="menu-card" data-name="فرخة مخلية" data-price="320"><div class="price-tag"><b>320</b><span>جنيه</span></div><div class="menu-info"><h3>3 - فرخة مخلية</h3><p>فرخة مخليه من العظم + تتبيلة الفراخ بمذاق خاص + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=300"></div></div>
+<div class="menu-card" data-name="فرخة شيش طاووق" data-price="380"><div class="price-tag"><b>380</b><span>جنيه</span></div><div class="menu-info"><h3>4 - فرخة شيش طاووق</h3><p>قطع فراخ مخلية من الورك + تتبيلة الشيش طاووق الخاصة + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=300"></div></div>
+<div class="menu-card" data-name="بانية مشوي" data-price="390"><div class="price-tag"><b>390</b><span>جنيه</span></div><div class="menu-info"><h3>5 - بانية مشوي</h3><p>شرائح الفراخ من الصدور المخليه + تتبيلة بمذاق خاص + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1611270632387-84f8a1d2f2b1?q=80&w=300"></div></div>
 </div>
 
 <div id="meals" class="section">
-<div class="menu-card" data-name="وجبة ربع فراخ" data-price="75"><div class="price-tag"><b>75</b><span>جنيه</span></div><div class="menu-info"><h3><span class="badge-new">1</span>وجبة ربع فراخ</h3><p>ربع فراخ مشوي على الفحم + أرز + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=300"></div></div>
-<div class="menu-card" data-name="وجبة كفتة" data-price="100"><div class="price-tag"><b>100</b><span>جنيه</span></div><div class="menu-info"><h3><span class="badge-new">2</span>وجبة كفته</h3><p>ربع كفتة كندوز + أرز + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1546964052-d9334ceb32ee?q=80&w=300"></div></div>
-<div class="menu-card" data-name="وجبة نص فراخ" data-price="160"><div class="price-tag"><b>160</b><span>جنيه</span></div><div class="menu-info"><h3><span class="badge-new">3</span>وجبة نص فراخ</h3><p>نصف فراخ مشوي + أرز + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=300"></div></div>
-<div class="menu-card" data-name="وجبة النبيشي" data-price="120"><div class="price-tag"><b>120</b><span>جنيه</span></div><div class="menu-info"><h3><span class="badge-new">4</span>وجبة النبيشي</h3><p>ربع فرخة مشوية + قطعتان كفتة + أرز + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=300"></div></div>
-<div class="menu-card" data-name="وجبة ابن مصر" data-price="180"><div class="price-tag"><b>180</b><span>جنيه</span></div><div class="menu-info"><h3><span class="badge-new">5</span>وجبة ابن مصر</h3><p>نصف كفتة مشوي + قطعتين كفتة + أرز بسمتي + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=300"></div></div>
-<div class="menu-card" data-name="وجبة شيش طاووق" data-price="125"><div class="price-tag"><b>125</b><span>جنيه</span></div><div class="menu-info"><h3><span class="badge-new">6</span>وجبة شيش طاووق</h3><p>ربع شيش طاووق + أرز + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1525183995014-b329225b9407?q=80&w=300"></div></div>
+<div class="section-head"><h2>الوجبات الفاخرة</h2><span>🍛</span></div>
+<div class="menu-card" data-name="وجبة ربع فراخ" data-price="75"><div class="price-tag"><b>75</b><span>جنيه</span></div><div class="menu-info"><h3><span class="badge-new">1</span> وجبة ربع فراخ</h3><p>ربع فراخ مشوي على الفحم + أرز + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=300"></div></div>
+<div class="menu-card" data-name="وجبة كفتة" data-price="100"><div class="price-tag"><b>100</b><span>جنيه</span></div><div class="menu-info"><h3><span class="badge-new">2</span> وجبة كفته</h3><p>ربع كفتة كندوز + أرز + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1546964052-d9334ceb32ee?q=80&w=300"></div></div>
+<div class="menu-card" data-name="وجبة نص فراخ" data-price="160"><div class="price-tag"><b>160</b><span>جنيه</span></div><div class="menu-info"><h3><span class="badge-new">3</span> وجبة نص فراخ</h3><p>نصف فراخ مشوي + أرز + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=300"></div></div>
+<div class="menu-card" data-name="وجبة النبيشي" data-price="120"><div class="price-tag"><b>120</b><span>جنيه</span></div><div class="menu-info"><h3><span class="badge-new">4</span> وجبة النبيشي</h3><p>ربع فرخة مشوية + قطعتان كفتة + أرز + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=300"></div></div>
+<div class="menu-card" data-name="وجبة ابن مصر" data-price="180"><div class="price-tag"><b>180</b><span>جنيه</span></div><div class="menu-info"><h3><span class="badge-new">5</span> وجبة ابن مصر</h3><p>نصف كفتة مشوي + قطعتين كفتة + أرز بسمتي + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=300"></div></div>
+<div class="menu-card" data-name="وجبة شيش طاووق" data-price="125"><div class="price-tag"><b>125</b><span>جنيه</span></div><div class="menu-info"><h3><span class="badge-new">6</span> وجبة شيش طاووق</h3><p>ربع شيش طاووق + أرز + عيش + سلطات</p><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1525183995014-b329225b9407?q=80&w=300"></div></div>
 </div>
 
 <div id="sandwich" class="section">
-<div class="sand-card" data-name="سندوتش كفتة" data-price="50"><div class="sand-price"><b>50</b><span>جنيه</span></div><div class="sand-info"><h3>سندوتش كفته</h3><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?q=80&w=300"></div></div>
-<div class="sand-card" data-name="سندوتش طرب" data-price="50"><div class="sand-price"><b>50</b><span>جنيه</span></div><div class="sand-info"><h3>سندوتش طرب</h3><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?q=80&w=300"></div></div>
-<div class="sand-card" data-name="سندوتش سجق" data-price="50"><div class="sand-price"><b>50</b><span>جنيه</span></div><div class="sand-info"><h3>سندوتش سجق</h3><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1593246049226-ded77bf90326?q=80&w=300"></div></div>
-<div class="sand-card" data-name="سندوتش شيش طاووق" data-price="50"><div class="sand-price"><b>50</b><span>جنيه</span></div><div class="sand-info"><h3>سندوتش شيش طاووق</h3><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1604908177223-81e3365604f8?q=80&w=300"></div></div>
-<div class="sand-card" data-name="سندوتش مكس" data-price="100"><div class="sand-price"><b>100</b><span>جنيه</span></div><div class="sand-info"><h3>سندوتش مكس 🔥</h3><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">-</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=300"></div></div>
+<div class="section-head"><h2>السندوتشات عيش بلدي</h2><span>🥙</span></div>
+<div class="sand-card" data-name="سندوتش كفتة" data-price="50"><div class="sand-price"><b>50</b><span>جنيه</span></div><div class="sand-info"><h3>سندوتش كفته</h3><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?q=80&w=300"></div></div>
+<div class="sand-card" data-name="سندوتش طرب" data-price="50"><div class="sand-price"><b>50</b><span>جنيه</span></div><div class="sand-info"><h3>سندوتش طرب</h3><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?q=80&w=300"></div></div>
+<div class="sand-card" data-name="سندوتش سجق" data-price="50"><div class="sand-price"><b>50</b><span>جنيه</span></div><div class="sand-info"><h3>سندوتش سجق</h3><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1593246049226-ded77bf90326?q=80&w=300"></div></div>
+<div class="sand-card" data-name="سندوتش شيش طاووق" data-price="50"><div class="sand-price"><b>50</b><span>جنيه</span></div><div class="sand-info"><h3>سندوتش شيش طاووق</h3><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1604908177223-81e3365604f8?q=80&w=300"></div></div>
+<div class="sand-card" data-name="سندوتش مكس" data-price="100"><div class="sand-price"><b>100</b><span>جنيه</span></div><div class="sand-info"><h3>سندوتش مكس 🔥</h3><div class="qty-controls"><button class="q-btn" onclick="chg(this,-1)">−</button><span class="q-num">0</span><button class="q-btn" onclick="chg(this,1)">+</button><button class="add-btn" onclick="addToCart(this)">إضافة</button></div></div><div class="menu-img"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=300"></div></div>
 </div>
 
 <div class="cart-drawer" id="cartDrawer" onclick="if(event.target==this)closeCart()">
@@ -99,13 +116,20 @@ body{font-family:'Cairo',sans-serif;background:#0a0a0a;color:#fff}
 <div id="cartItems" style="margin-top:12px"></div>
 <div class="total-box">
 <div style="display:flex;justify-content:space-between"><span>المجموع:</span><b id="totalPrice">0 جنيه</b></div>
-<div style="display:flex;justify-content:space-between;margin-top:6px;color:var(--gold)"><span>الإجمالي + الدليفري:</span><b id="grandTotal">0ج + الدليفري</b></div>
-<small style="color:#888">الدليفري يحدد حسب المنطقة - 01015861991</small>
+<div style="display:flex;justify-content:space-between;margin-top:6px;color:var(--gold)"><span>الإجمالي مع الدليفري:</span><b id="grandTotal">0ج + الدليفري</b></div>
+<small style="color:#888">الدليفري يحدد حسب المنطقة</small>
 </div>
-<button class="order-btn" onclick="sendOrder()">📲 اطلب واتساب - 01015861991</button>
-<button class="order-btn" style="background:#111;border:1px solid var(--gold);color:var(--gold);margin-top:8px" onclick="clearCart()">🗑️ إفراغ السلة</button>
+<button class="order-btn" onclick="sendOrder()">📲 اطلب واتساب</button>
+<a href="tel:+201015861991" class="order-btn" style="background:linear-gradient(135deg,var(--gold),#c8870a);color:#000;text-align:center;text-decoration:none;display:block;margin-top:10px">📞 اتصل للاستفسار - 01015861991</a>
+<button class="order-btn" style="background:#111;border:1px solid var(--gold);color:var(--gold);margin-top:10px" onclick="clearCart()">🗑️ إفراغ السلة</button>
 </div>
 </div>
+
+<footer>
+<b>شكراً لطلبكم من مشويات العربي</b><br>
+ELARABY - طعم أصيل .. جودة بتفرق 🔥<br>
+للطلب: <a href="tel:+201015861991" style="color:var(--gold);text-decoration:none">01015861991</a>
+</footer>
 
 <script>
 let cart=[];
@@ -114,6 +138,7 @@ document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
 document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
 document.getElementById(id).classList.add('active');
 if(e) e.target.classList.add('active');
+window.scrollTo({top:280,behavior:'smooth'});
 }
 function chg(btn,delta){
 let numEl=btn.parentElement.querySelector('.q-num');
@@ -147,11 +172,11 @@ function clearCart(){cart=[];updateCart();closeCart();}
 function openCart(){document.getElementById('cartDrawer').classList.add('open');}
 function closeCart(){document.getElementById('cartDrawer').classList.remove('open');}
 function sendOrder(){
-if(cart.length==0){alert('السلة فاضية!');return;}
+if(cart.length==0){alert('السلة فاضية! اختار حاجة الأول');return;}
 let msg='طلب جديد - مشويات العربي 🔥%0A%0A';
 cart.forEach(it=>{msg+=`• ${it.name} - ${it.qty} × ${it.price} = ${it.qty*it.price}ج%0A`});
 let total=cart.reduce((s,i)=>s+i.price*i.qty,0);
-msg+=`%0Aالمجموع: ${total}ج + الدليفري%0A%0Aالاسم:%0Aالعنوان:%0Aرقم التليفون:%0A%0Aشكرا - 01015861991`;
+msg+=`%0Aالمجموع: ${total}ج + الدليفري%0A%0Aالاسم:%0Aالعنوان:%0Aرقم التليفون:%0A%0Aشكراً لطلبكم من مشويات العربي ❤️🔥`;
 window.open(`https://wa.me/201015861991?text=${msg}`,'_blank');
 }
 </script>
