@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIX CHICKEN - سنجل ودبل - صور حقيقية</title>
+<title>MIX CHICKEN PREMIUM - سنجل ودبل - كل صنف لوحده</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
@@ -23,8 +23,7 @@ body{background:#0a0a0a;color:#fff;padding-bottom:100px}
 .card-body small{font-size:10px;color:#ffffff66;display:block;margin-top:4px;min-height:26px}
 .row{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
 .price em{color:#ff1a1a;font-style:normal;font-size:14px}
-.add{width:36px;height:36px;border-radius:50%;background:#fff;color:#000;border:none;font-weight:900;cursor:pointer;font-size:18px;z-index:2;position:relative}
-.add:hover{background:#ff1a1a;color:#fff}
+.add{width:36px;height:36px;border-radius:50%;background:#fff;color:#000;border:none;font-weight:900;cursor:pointer;font-size:18px}
 .label{grid-column:1/-1;background:#111;border:1px solid #ffffff12;padding:14px 18px;border-radius:18px;display:flex;justify-content:space-between;margin-top:12px}
 .cats{position:sticky;top:68px;z-index:99;background:rgba(10,10,10,0.9);backdrop-filter:blur(20px);padding:10px 4%;display:flex;gap:8px;overflow-x:auto}
 .cat{padding:10px 18px;border-radius:100px;background:#ffffff0a;border:1px solid #ffffff14;font-weight:800;font-size:12px;white-space:nowrap;cursor:pointer;color:#ffffffaa}
@@ -34,38 +33,35 @@ body{background:#0a0a0a;color:#fff;padding-bottom:100px}
 .modal.open{display:flex}
 .sheet{background:#111;width:100%;max-width:520px;max-height:95vh;border-radius:28px 28px 0 0;overflow:hidden;display:flex;flex-direction:column;border:1px solid #ffffff14}
 .sheet-head{padding:18px;display:flex;justify-content:space-between;border-bottom:1px solid #ffffff0f;background:#151515;flex-shrink:0}
-.sheet-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:#0f0f0f}
-.sheet-foot{padding:16px;background:#151515;border-top:2px solid #ff1a1a33;overflow-y:auto;max-height:70vh;flex-shrink:0}
+.sheet-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:12px;background:#0f0f0f;max-height:35vh;min-height:120px}
+.sheet-foot{padding:16px;background:#151515;border-top:2px solid #ff1a1a33;overflow-y:auto;max-height:60vh;flex-shrink:0}
 .inp{width:100%;padding:14px;border-radius:14px;border:1px solid #ffffff14;background:#0a0a0a;color:#fff;margin-top:6px}
-.go{background:linear-gradient(135deg,#00c950,#009640);color:#fff;border:none;width:100%;padding:18px;border-radius:16px;font-weight:900;font-size:16px;cursor:pointer;margin-top:12px}
+.go{background:linear-gradient(135deg,#00c950,#009640);color:#fff;border:none;width:100%;padding:18px;border-radius:16px;font-weight:900;font-size:16px;cursor:pointer;margin-top:12px;box-shadow:0 8px 25px #00c95055;animation:pulse 2s infinite}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.02)}100%{transform:scale(1)}}
 .bar{position:fixed;bottom:16px;left:3%;right:3%;background:#ffffff0f;backdrop-filter:blur(30px);border:1px solid #ffffff14;color:#fff;padding:14px 16px;border-radius:100px;display:flex;justify-content:space-between;align-items:center;z-index:200}
-/* Product Modal */
 .product-modal{position:fixed;inset:0;background:#000000f5;backdrop-filter:blur(30px);z-index:10000;display:none;align-items:center;justify-content:center;padding:12px}
 .product-modal.open{display:flex}
-.product-card{background:#111;width:100%;max-width:480px;max-height:92vh;border-radius:28px;overflow:hidden;display:flex;flex-direction:column;border:1px solid #ffffff14;box-shadow:0 20px 60px #000}
+.product-card{background:#111;width:100%;max-width:480px;max-height:92vh;border-radius:28px;overflow:hidden;display:flex;flex-direction:column;border:1px solid #ffffff14}
 .product-img{width:100%;aspect-ratio:1.2/1;object-fit:cover;background:#1a1a1a}
 .product-info{padding:18px;overflow-y:auto;flex:1;background:#111}
 .product-title{font-size:20px;font-weight:900;color:#fff}
 .product-desc{font-size:12px;color:#ffffff88;margin-top:6px;line-height:1.6}
 .options{margin-top:16px}
-.option-title{font-size:13px;font-weight:900;color:#fff;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.option-title{font-size:13px;font-weight:900;color:#fff;margin-bottom:8px}
 .option-group{display:flex;flex-direction:column;gap:8px}
 .option-item{display:flex;justify-content:space-between;align-items:center;background:#1a1a1a;border:2px solid #ffffff0a;padding:14px;border-radius:16px;cursor:pointer;transition:0.2s}
 .option-item.active{border-color:#ff1a1a;background:#1a0000}
-.option-item.active .option-check{background:#ff1a1a;border-color:#ff1a1a}
-.option-left{display:flex;align-items:center;gap:10px}
 .option-check{width:22px;height:22px;border-radius:50%;border:2px solid #ffffff22;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff}
 .option-name{font-weight:800;font-size:13px;color:#fff}
 .option-note{font-size:10px;color:#ffffff66;display:block}
 .option-price{font-weight:900;color:#ffcc00;font-size:14px}
 .qty-section{margin-top:16px;background:#0a0a0a;border:1px solid #ffffff0f;border-radius:16px;padding:14px;display:flex;justify-content:space-between;align-items:center}
-.qty-controls{display:flex;align-items:center;gap:10px}
 .qty-btn{width:36px;height:36px;border-radius:50%;border:none;font-weight:900;font-size:18px;cursor:pointer}
 .qty-minus{background:#ffffff14;color:#fff}
 .qty-plus{background:#fff;color:#000}
 .qty-num{font-weight:900;font-size:18px;min-width:30px;text-align:center;color:#fff}
-.add-to-cart-big{background:linear-gradient(135deg,#ff1a1a,#cc0000);color:#fff;border:none;width:100%;padding:18px;border-radius:16px;font-weight:900;font-size:16px;cursor:pointer;margin-top:16px;box-shadow:0 8px 25px #ff000033}
-.item{display:flex;gap:12px;background:#1a1a1a;padding:12px;border-radius:18px;border:1px solid #ffffff0a;align-items:center;position:relative}
+.add-to-cart-big{background:linear-gradient(135deg,#ff1a1a,#cc0000);color:#fff;border:none;width:100%;padding:18px;border-radius:16px;font-weight:900;font-size:16px;cursor:pointer;margin-top:16px}
+.item{display:flex;gap:12px;background:#1a1a1a;padding:14px;border-radius:18px;border:1px solid #ffffff0a;align-items:center}
 .item img{width:60px;height:60px;border-radius:14px;object-fit:cover}
 </style>
 </head>
@@ -89,7 +85,6 @@ body{background:#0a0a0a;color:#fff;padding-bottom:100px}
 
 <div class="grid" id="grid"></div>
 
-<!-- Product Detail Modal -->
 <div class="product-modal" id="productModal" onclick="if(event.target===this)closeProduct()">
 <div class="product-card">
 <img class="product-img" id="pImg" src="">
@@ -98,39 +93,31 @@ body{background:#0a0a0a;color:#fff;padding-bottom:100px}
 <div><div class="product-title" id="pTitle"></div><div class="product-desc" id="pDesc"></div></div>
 <button onclick="closeProduct()" style="background:#ffffff12;width:36px;height:36px;border-radius:50%;border:none;color:#fff;font-size:18px">✕</button>
 </div>
-
 <div class="options" id="pOptions"></div>
-
 <div class="qty-section">
 <div style="font-weight:900;font-size:13px">الكمية</div>
-<div class="qty-controls">
-<button class="qty-btn qty-minus" onclick="pQtyChange(-1)">−</button>
-<span class="qty-num" id="pQty">1</span>
-<button class="qty-btn qty-plus" onclick="pQtyChange(1)">+</button>
+<div style="display:flex;align-items:center;gap:10px"><button class="qty-btn qty-minus" onclick="pQtyChange(-1)">−</button><span class="qty-num" id="pQty">1</span><button class="qty-btn qty-plus" onclick="pQtyChange(1)">+</button></div>
 </div>
-</div>
-
 <button class="add-to-cart-big" onclick="confirmAddToCart()">🛒 إضافة للسلة - <span id="pTotalPrice">0 EGP</span></button>
-<p style="font-size:10px;color:#ffffff66;text-align:center;margin-top:10px">دوس على الصورة تفتح المنتج وتختار سنجل ولا دبل ولا كومبو</p>
 </div>
 </div>
 </div>
 
-<!-- Cart Modal -->
 <div class="modal" id="cartModal" onclick="if(event.target===this)closeCart()">
 <div class="sheet">
-<div class="sheet-head"><div><h3 style="font-weight:900">🛒 سلتك - كل صنف لوحده</h3><p style="font-size:10px;color:#ffffff66">كل اختيار سنجل/دبل سطر لوحده</p></div><button onclick="closeCart()" style="background:#ffffff12;width:40px;height:40px;border-radius:50%;border:none;color:#fff;font-size:20px">✕</button></div>
+<div class="sheet-head"><div><h3 style="font-weight:900">🛒 سلتك - كل صنف لوحده</h3><p style="font-size:10px;color:#ffffff66">نفس المنتج يتجمع ×2 - منتج مختلف سطر جديد</p></div><button onclick="closeCart()" style="background:#ffffff12;width:40px;height:40px;border-radius:50%;border:none;color:#fff;font-size:20px">✕</button></div>
 <div class="sheet-body" id="cartBody"></div>
 <div class="sheet-foot" id="cartFooter">
 <div style="background:#0f0f0f;border:2px solid #ff1a1a44;border-radius:16px;padding:14px">
 <h4 style="font-size:13px;font-weight:900;margin-bottom:12px;color:#ff1a1a">📋 بيانات التوصيل *</h4>
-<div style="margin:10px 0"><label style="font-size:12px;color:#fff;font-weight:800">👤 الاسم *</label><input class="inp" id="custName" placeholder="مثال: محمد أحمد"></div>
+<div style="margin:10px 0"><label style="font-size:12px;color:#fff;font-weight:800">👤 الاسم *</label><input class="inp" id="custName" placeholder="محمد أحمد"></div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div><label style="font-size:12px;color:#fff;font-weight:800">📱 موبايل 1 *</label><input class="inp" id="custPhone" placeholder="010xxxxxxxx" type="tel"></div><div><label style="font-size:11px;color:#ffffff99">📱 موبايل 2</label><input class="inp" id="custPhone2" placeholder="011xxxxxxxx"></div></div>
-<div style="margin:12px 0"><label style="font-size:12px;color:#fff;font-weight:800">📍 العنوان بالتفصيل *</label><textarea class="inp" id="custAddress" placeholder="المنطقة - الشارع - العمارة - الدور" rows="3"></textarea></div>
+<div style="margin:12px 0"><label style="font-size:12px;color:#fff;font-weight:800">📍 العنوان *</label><textarea class="inp" id="custAddress" placeholder="المنطقة - الشارع - العمارة - الدور" rows="3"></textarea></div>
 <div style="margin:10px 0"><label style="font-size:11px;color:#ffffff99">📝 ملاحظات</label><input class="inp" id="custNotes" placeholder="من غير شطة..."></div>
 </div>
 <div style="background:#0a0a0a;padding:14px;border-radius:16px;margin:14px 0;border:2px solid #ffcc0033">
 <div style="display:flex;justify-content:space-between;font-size:12px;color:#ffffff99"><span>📦 إجمالي القطع:</span><span id="totalItems" style="color:#fff;font-weight:900">0</span></div>
+<div style="display:flex;justify-content:space-between;font-size:12px;color:#ffffff99;margin-top:6px"><span>🍗 أصناف مختلفة:</span><span id="totalTypes" style="color:#fff">0</span></div>
 <div style="display:flex;justify-content:space-between;font-size:12px;color:#ffffff99;margin-top:6px"><span>💰 سعر الأكل:</span><span id="subtotal" style="color:#fff">0 EGP</span></div>
 <div style="display:flex;justify-content:space-between;font-weight:900;font-size:19px;border-top:2px solid #ff1a1a;padding-top:10px;margin-top:10px;color:#fff"><span>💵 الإجمالي:</span><span id="totalPrice" style="color:#ffcc00">0 EGP</span></div>
 </div>
@@ -140,103 +127,89 @@ body{background:#0a0a0a;color:#fff;padding-bottom:100px}
 </div>
 
 <div class="bar">
-<div><div style="font-size:9px;opacity:0.6">سلتك - سنجل ودبل</div><div style="font-weight:900"><span id="footerCount">0</span> قطعة - <b id="footerPrice">0 EGP</b></div></div>
+<div><div style="font-size:9px;opacity:0.6">سلتك</div><div style="font-weight:900"><span id="footerCount">0</span> قطعة - <b id="footerPrice">0 EGP</b></div></div>
 <button onclick="openCart()" style="background:#fff;color:#000;border:none;padding:10px 20px;border-radius:100px;font-weight:900;font-size:12px">🛒 السلة</button>
 </div>
 
 <script>
 const products=[
-{id:1,cat:'sand',name:'فاير زنجر Fire Zinger',desc:'صورتك الحقيقية - حار نار - هاليبينو - شيدر - خس - مايونيز حار - مقرمش',img:'fire-zinger.jpg',options:[{label:'سنجل Single - قطعة واحدة',price:130,note:'ساندويتش واحد مقرمش'},{label:'دبل Double - قطعتين',price:195,note:'2 قطعة فراخ - حجم أكبر - الأكثر طلبا',best:true}]},
-{id:2,cat:'sand',name:'سوبر ميكس Super Mix',desc:'قطع دجاج مقرمشة ذهبية - موتزاريلا سايحة - ميكس صوص',img:'burger.jpg',options:[{label:'سنجل Single',price:140,note:'قطعة واحدة'},{label:'دبل Double',price:205,note:'قطعتين - دوبل - الأكثر مبيعا',best:true}]},
-{id:3,cat:'sand',name:'سوبر تيستي Super Tasty',img:'burger.jpg',desc:'كرسبي - ميكس - بيف بيكون - جبنة سويسري',options:[{label:'سنجل',price:135},{label:'دبل',price:195,best:true}]},
-{id:4,cat:'sand',name:'تشيكن رانش',img:'burger.jpg',desc:'رانش صوص - شيدر - بيف بيكون',options:[{label:'سنجل',price:135},{label:'دبل',price:195,best:true}]},
-{id:5,cat:'sand',name:'سويت شيلي',img:'burger.jpg',desc:'سويت شيلي - شيدر - تركي مدخن',options:[{label:'سنجل',price:135},{label:'دبل',price:195,best:true}]},
-{id:6,cat:'sand',name:'ميكس تشيز',img:'burger.jpg',desc:'3 أنواع جبنة - تركي - ميكس',options:[{label:'سنجل',price:140},{label:'دبل',price:205,best:true}]},
-{id:7,cat:'sand',name:'فرايد تشيكن',img:'burger.jpg',desc:'فراخ مقلية - بيج صوص - شيدر',options:[{label:'سنجل',price:135},{label:'دبل',price:195,best:true}]},
-{id:8,cat:'sand',name:'جولدن ميكس',img:'burger.jpg',desc:'جولدن صوص - الخطير - شيدر',options:[{label:'سنجل',price:135},{label:'دبل',price:205,best:true}]},
-{id:9,cat:'sand',name:'مايتي زنجر',img:'fire-zinger.jpg',desc:'2 زنجر - عملاق - حار نار - من صورتك',options:[{label:'ساندويتش واحد عملاق',price:175,note:'حجم كبير جدا'}]},
-{id:10,cat:'sand',name:'زنجر راوند',img:'fire-zinger.jpg',desc:'زنجر - خس - مايونيز - شيدر - خبز راوند',options:[{label:'سنجل',price:120}]},
-{id:11,cat:'sand',name:'سوبر ميكس دوبل',img:'burger.jpg',desc:'دوبل - 2 قطعة فراخ مقرمشة - موتزاريلا',options:[{label:'دبل - قطعتين',price:205,note:'دوبل'}]},
-
-{id:12,cat:'filler',name:'كلاسيك فيلر',img:'burger.jpg',desc:'بيج - بيف بيكون - سويسري - فيلر كبير',options:[{label:'ساندويتش',price:195}]},
-{id:13,cat:'filler',name:'بيج فيلر هاليبينو',img:'burger.jpg',desc:'هاليبينو حار - تركي - أمريكي',options:[{label:'ساندويتش',price:195}]},
-{id:14,cat:'filler',name:'زنجر فيلر',img:'fire-zinger.jpg',desc:'زنجر - شيدر - ميكس - فيلر',options:[{label:'سنجل',price:115},{label:'دبل - كومبو',price:195,best:true,note:'+ بطاطس + كولا'}]},
-
-{id:15,cat:'wrap',name:'تويستر كبير Large 65',img:'wrap.jpg',desc:'صورتك الحقيقية - تورتيلا - كرسبي - بطاطس - خس',options:[{label:'سنجل - واحد',price:65},{label:'دبل - اتنين',price:115,note:'2 تويستر',best:true}]},
-{id:16,cat:'wrap',name:'تويستر وسط Medium 60',img:'wrap.jpg',desc:'وسط - من صورة الراب الحقيقي',options:[{label:'واحد',price:60},{label:'اتنين',price:110,best:true}]},
-{id:17,cat:'wrap',name:'موتزاريلا تويستر',img:'wrap.jpg',desc:'استربس - موتزاريلا سايحة - من صورتك',options:[{label:'سنجل',price:115}]},
-{id:18,cat:'wrap',name:'تويستر 100',img:'wrap.jpg',desc:'كرسبي - سويسري - بيكون - تورتيلا كبيرة',options:[{label:'سنجل',price:100},{label:'كومبو + بطاطس + كولا',price:160,best:true}]},
-{id:19,cat:'wrap',name:'بيج راب Big Rab 195',img:'wrap.jpg',desc:'صدور كرسبي كبيرة - من صورتك - راب عملاق',options:[{label:'راب واحد',price:195}]},
-{id:20,cat:'wrap',name:'دبل تشيكن راب Double 195',img:'wrap.jpg',desc:'2 استربس - فرايز - راب دوبل',options:[{label:'سنجل',price:195}]},
-{id:21,cat:'wrap',name:'كومبو COMBO 60',img:'family-480.jpg',desc:'بطاطس + كولا - من البوكس العائلي',options:[{label:'كومبو',price:60}]},
-
-{id:22,cat:'single',name:'سناك بوكس',img:'chicken-pieces.jpg',desc:'من صورتك - 2 قطعة فراخ مقلية ذهبية - بطاطس - كول سلو - عيش',options:[{label:'سنجل بوكس',price:130}]},
-{id:23,cat:'single',name:'لايت بوكس',img:'chicken-pieces.jpg',desc:'3 استربس ذهبي مقرمش - بطاطس - صوص',options:[{label:'سنجل',price:130}]},
-{id:24,cat:'single',name:'وجبة المصريين Egyptians 165',img:'egyptians.jpg',desc:'صورتك الحقيقية - 2 فراخ - ريزو مبهر - بطاطس - كول سلو - عيش',options:[{label:'وجبة المصريين',price:165,note:'الأكثر طلبا - 2 فراخ'}]},
-{id:25,cat:'single',name:'سمارت بوكس',img:'egyptians.jpg',desc:'فراخ + 2 استربس - من صورة المصريين',options:[{label:'بوكس',price:165}]},
-{id:26,cat:'single',name:'دينر بوكس Dinner Box 195',img:'chicken-pieces.jpg',desc:'3 قطع فراخ مقلية - بطاطس - كول سلو - عيش - صوص',options:[{label:'3 قطع',price:195}]},
-{id:27,cat:'single',name:'دينر ستربس Dinner Strips 195',img:'chicken-pieces.jpg',desc:'5 استربس مقرمش - بطاطس - كول سلو',options:[{label:'5 استربس',price:195}]},
-{id:28,cat:'single',name:'سوبر دينر Super Dinner 240',img:'chicken-pieces.jpg',desc:'4 قطع فراخ مقلية ذهبية مقرمشة - بطاطس - كول سلو - 2 عيش',options:[{label:'4 قطع',price:240}]},
-{id:29,cat:'single',name:'جامبو بوكس Jumbo Box 385',img:'family-480.jpg',desc:'6 قطع - من البوكس العائلي الحقيقي 480 - بطاطس كبيرة - 2 كول سلو',options:[{label:'6 قطع',price:385}]},
-
-{id:30,cat:'family',name:'فاميلي 7 قطع Family 7pcs 415',img:'family-480.jpg',desc:'من صورتك - 7 قطع - بطاطس - كول سلو - عيش',options:[{label:'7 قطع',price:415}]},
-{id:31,cat:'family',name:'فاميلي 8 قطع Family 8pcs 480',img:'family-480.jpg',desc:'صورتك الحقيقية - 480 EGP - البوكس الأحمر - 8 قطع - بطاطس - كول سلو',options:[{label:'8 قطع - 480',price:480,best:true}]},
-{id:32,cat:'family',name:'سوبر بوكس 9 قطع Super Box 540',img:'family-480.jpg',desc:'9 قطع - من البوكس الحقيقي - عائلي كبير',options:[{label:'9 قطع',price:540}]},
-{id:33,cat:'family',name:'تشيكن ميكس Chicken Mix 595',img:'family-480.jpg',desc:'6 فراخ + 10 استربس - من صورتك - بوكس ميكس',options:[{label:'ميكس 6+10',price:595}]},
-{id:34,cat:'family',name:'فاميلي ستربس Family Strips 615',img:'family-480.jpg',desc:'10 استربس مقرمش - من البوكس - عائلي استربس',options:[{label:'10 استربس',price:615}]},
-{id:35,cat:'family',name:'فاميلي ميل 12 - 685',img:'family-480.jpg',desc:'12 قطعة فراخ مقلية ذهبية - بوكس كبير',options:[{label:'12 قطعة',price:685}]},
-{id:36,cat:'family',name:'اقتصادية 10 - 785',img:'family-480.jpg',desc:'10 قطع - من البوكس الحقيقي - اقتصادية',options:[{label:'10 قطع',price:785}]},
-{id:37,cat:'family',name:'سوبر فاميلي 18 - 890',img:'family-480.jpg',desc:'18 قطعة - من صورتك - سوبر فاميلي',options:[{label:'18 قطعة',price:890}]},
-{id:38,cat:'family',name:'بارتي ميل 21 - 999',img:'family-480.jpg',desc:'21 قطعة - 4 كول سلو - 4 بطاطس - 4 عيش - بارتي',options:[{label:'21 قطعة - بارتي',price:999,best:true}]},
-
-{id:39,cat:'extreme',name:'رايز ستربس Rise Strips 130',img:'egyptians.jpg',desc:'استربس - رز مبهر - من صورة المصريين',options:[{label:'3 استربس + رز',price:130}]},
-{id:40,cat:'extreme',name:'لايت موكس Lite Mox 130',img:'egyptians.jpg',desc:'استربس - رز مبهر - موكس',options:[{label:'سنجل',price:130}]},
-{id:41,cat:'extreme',name:'سوبر تشيكن Super Chicken 165',img:'egyptians.jpg',desc:'صورتك الحقيقية - Egyptians Meal - سوبر تشيكن',options:[{label:'سنجل',price:165}]},
-{id:42,cat:'extreme',name:'رايز ستربس 205',img:'egyptians.jpg',desc:'4 استربس - 400جرام رز مبهر - اكستريم',options:[{label:'4 استربس + رز كبير',price:205,best:true}]},
-{id:43,cat:'extreme',name:'رايز ميل Rise Meal 205',img:'egyptians.jpg',desc:'2 فراخ - رز - من صورة المصريين - رايز ميل',options:[{label:'2 فراخ + رز',price:205}]},
-{id:44,cat:'extreme',name:'سوبر تشيكن 215',img:'egyptians.jpg',desc:'2 فراخ + 2 استربس - رز مبهر - سوبر تشيكن',options:[{label:'سنجل',price:215}]},
-{id:45,cat:'extreme',name:'اكستريم ماكس Extreme Max 215',img:'egyptians.jpg',desc:'فراخ + زنجر - بطاطس - رز - اكستريم ماكس',options:[{label:'ماكس',price:215,best:true}]},
-{id:46,cat:'extreme',name:'بطاطس شيدر Fries 70',img:'family-480.jpg',desc:'بطاطس - شيدر سايح - من البوكس',options:[{label:'وسط',price:70},{label:'كبير',price:90,best:true}]},
-{id:47,cat:'extreme',name:'تشيزي فرايز Cheezy Fries 95',img:'family-480.jpg',desc:'بطاطس تشيزي + ريزو - من صورتك',options:[{label:'تشيزي فرايز',price:95}]},
-
-{id:48,cat:'kids',name:'ستربس كيدز Strips Kids 100',img:'chicken-pieces.jpg',desc:'2 استربس - فرايز - عصير - لعبة - كيدز',options:[{label:'وجبة أطفال',price:100}]},
-{id:49,cat:'kids',name:'تشيكن كيدز Chicken Kids 100',img:'chicken-pieces.jpg',desc:'قطعة فراخ - فرايز - عصير - لعبة',options:[{label:'وجبة أطفال',price:100}]},
-
-{id:50,cat:'add',name:'بيف بيكون 15',img:'family-480.jpg',desc:'إضافة بيف بيكون',options:[{label:'إضافة واحدة',price:15},{label:'دبل - 2',price:25,best:true}]},
-{id:51,cat:'add',name:'تركي مدخن 15',img:'family-480.jpg',desc:'إضافة تركي مدخن',options:[{label:'إضافة',price:15},{label:'دبل',price:25,best:true}]},
-{id:52,cat:'add',name:'جبن شيدر 15',img:'family-480.jpg',desc:'شيدر سايح - إضافة جبنة',options:[{label:'إضافة',price:15},{label:'دبل',price:25,best:true}]},
-{id:53,cat:'add',name:'فرايز Fries 35',img:'family-480.jpg',desc:'بطاطس مقرمشة - من صورتك - فرايز',options:[{label:'وسط',price:35},{label:'كبير',price:55,best:true}]},
+{id:1,cat:'sand',name:'فاير زنجر Fire Zinger',desc:'صورتك الحقيقية - حار نار - هاليبينو - شيدر',img:'fire-zinger.jpg',options:[{label:'سنجل Single',price:130,note:'قطعة واحدة'},{label:'دبل Double',price:195,note:'قطعتين - الأكثر طلبا',best:true}]},
+{id:2,cat:'sand',name:'سوبر ميكس Super Mix',desc:'قطع دجاج مقرمشة ذهبية - موتزاريلا',img:'burger.jpg',options:[{label:'سنجل',price:140},{label:'دبل',price:205,best:true}]},
+{id:3,cat:'sand',name:'سوبر تيستي',img:'burger.jpg',desc:'كرسبي - ميكس - بيف بيكون',options:[{label:'سنجل',price:135},{label:'دبل',price:195,best:true}]},
+{id:4,cat:'sand',name:'تشيكن رانش',img:'burger.jpg',desc:'رانش - شيدر - بيف بيكون',options:[{label:'سنجل',price:135},{label:'دبل',price:195,best:true}]},
+{id:5,cat:'sand',name:'سويت شيلي',img:'burger.jpg',desc:'سويت شيلي - شيدر - تركي',options:[{label:'سنجل',price:135},{label:'دبل',price:195,best:true}]},
+{id:6,cat:'sand',name:'ميكس تشيز',img:'burger.jpg',desc:'3 أنواع جبنة',options:[{label:'سنجل',price:140},{label:'دبل',price:205,best:true}]},
+{id:7,cat:'sand',name:'فرايد تشيكن',img:'burger.jpg',desc:'فراخ مقلية - بيج صوص',options:[{label:'سنجل',price:135},{label:'دبل',price:195,best:true}]},
+{id:8,cat:'sand',name:'جولدن ميكس',img:'burger.jpg',desc:'جولدن صوص - الخطير',options:[{label:'سنجل',price:135},{label:'دبل',price:205,best:true}]},
+{id:9,cat:'sand',name:'مايتي زنجر',img:'fire-zinger.jpg',desc:'2 زنجر - عملاق',options:[{label:'ساندويتش عملاق',price:175}]},
+{id:10,cat:'sand',name:'زنجر راوند',img:'fire-zinger.jpg',desc:'زنجر - خس - مايونيز',options:[{label:'سنجل',price:120}]},
+{id:11,cat:'sand',name:'سوبر ميكس دوبل',img:'burger.jpg',desc:'دوبل - 2 قطعة',options:[{label:'دبل',price:205}]},
+{id:12,cat:'filler',name:'كلاسيك فيلر',img:'burger.jpg',desc:'بيج - بيف بيكون - سويسري',options:[{label:'ساندويتش',price:195}]},
+{id:13,cat:'filler',name:'بيج فيلر هاليبينو',img:'burger.jpg',desc:'هاليبينو - تركي',options:[{label:'ساندويتش',price:195}]},
+{id:14,cat:'filler',name:'زنجر فيلر',img:'fire-zinger.jpg',desc:'زنجر - شيدر - ميكس',options:[{label:'سنجل',price:115},{label:'دبل كومبو',price:195,best:true}]},
+{id:15,cat:'wrap',name:'تويستر كبير Large 65',img:'wrap.jpg',desc:'تورتيلا - كرسبي - بطاطس',options:[{label:'واحد',price:65},{label:'اتنين',price:115,best:true}]},
+{id:16,cat:'wrap',name:'تويستر وسط 60',img:'wrap.jpg',desc:'وسط - راب حقيقي',options:[{label:'واحد',price:60},{label:'اتنين',price:110,best:true}]},
+{id:17,cat:'wrap',name:'موتزاريلا تويستر',img:'wrap.jpg',desc:'استربس - موتزاريلا',options:[{label:'سنجل',price:115}]},
+{id:18,cat:'wrap',name:'تويستر 100',img:'wrap.jpg',desc:'كرسبي - سويسري - بيكون',options:[{label:'سنجل',price:100},{label:'كومبو',price:160,best:true}]},
+{id:19,cat:'wrap',name:'بيج راب Big Rab 195',img:'wrap.jpg',desc:'صدور كرسبي كبيرة',options:[{label:'واحد',price:195}]},
+{id:20,cat:'wrap',name:'دبل راب 195',img:'wrap.jpg',desc:'2 استربس - فرايز',options:[{label:'واحد',price:195}]},
+{id:21,cat:'wrap',name:'كومبو 60',img:'family-480.jpg',desc:'بطاطس + كولا',options:[{label:'كومبو',price:60}]},
+{id:22,cat:'single',name:'سناك بوكس',img:'chicken-pieces.jpg',desc:'2 قطعة فراخ ذهبية',options:[{label:'بوكس',price:130}]},
+{id:23,cat:'single',name:'لايت بوكس',img:'chicken-pieces.jpg',desc:'3 استربس ذهبي',options:[{label:'بوكس',price:130}]},
+{id:24,cat:'single',name:'وجبة المصريين 165',img:'egyptians.jpg',desc:'صورتك الحقيقية - 2 فراخ - ريزو',options:[{label:'وجبة',price:165,best:true}]},
+{id:25,cat:'single',name:'سمارت بوكس',img:'egyptians.jpg',desc:'فراخ + 2 استربس',options:[{label:'بوكس',price:165}]},
+{id:26,cat:'single',name:'دينر بوكس 195',img:'chicken-pieces.jpg',desc:'3 قطع فراخ',options:[{label:'3 قطع',price:195}]},
+{id:27,cat:'single',name:'دينر ستربس 195',img:'chicken-pieces.jpg',desc:'5 استربس مقرمش',options:[{label:'5 استربس',price:195}]},
+{id:28,cat:'single',name:'سوبر دينر 240',img:'chicken-pieces.jpg',desc:'4 قطع فراخ ذهبية',options:[{label:'4 قطع',price:240}]},
+{id:29,cat:'single',name:'جامبو بوكس 385',img:'family-480.jpg',desc:'6 قطع - من البوكس 480',options:[{label:'6 قطع',price:385}]},
+{id:30,cat:'family',name:'فاميلي 7 قطع 415',img:'family-480.jpg',desc:'7 قطع',options:[{label:'7 قطع',price:415}]},
+{id:31,cat:'family',name:'فاميلي 8 قطع 480',img:'family-480.jpg',desc:'صورتك الحقيقية - 480 EGP',options:[{label:'8 قطع',price:480,best:true}]},
+{id:32,cat:'family',name:'سوبر بوكس 9 قطع 540',img:'family-480.jpg',desc:'9 قطع',options:[{label:'9 قطع',price:540}]},
+{id:33,cat:'family',name:'تشيكن ميكس 595',img:'family-480.jpg',desc:'6 فراخ + 10 استربس',options:[{label:'ميكس',price:595}]},
+{id:34,cat:'family',name:'فاميلي ستربس 615',img:'family-480.jpg',desc:'10 استربس',options:[{label:'10 استربس',price:615}]},
+{id:35,cat:'family',name:'فاميلي ميل 12 - 685',img:'family-480.jpg',desc:'12 قطعة',options:[{label:'12 قطعة',price:685}]},
+{id:36,cat:'family',name:'اقتصادية 10 - 785',img:'family-480.jpg',desc:'10 قطع',options:[{label:'10 قطع',price:785}]},
+{id:37,cat:'family',name:'سوبر فاميلي 18 - 890',img:'family-480.jpg',desc:'18 قطعة',options:[{label:'18 قطعة',price:890}]},
+{id:38,cat:'family',name:'بارتي ميل 21 - 999',img:'family-480.jpg',desc:'21 قطعة - 4 كول سلو - 4 بطاطس',options:[{label:'21 قطعة',price:999,best:true}]},
+{id:39,cat:'extreme',name:'رايز ستربس 130',img:'egyptians.jpg',desc:'استربس - رز',options:[{label:'بوكس',price:130}]},
+{id:40,cat:'extreme',name:'لايت موكس 130',img:'egyptians.jpg',desc:'استربس - رز مبهر',options:[{label:'بوكس',price:130}]},
+{id:41,cat:'extreme',name:'سوبر تشيكن 165',img:'egyptians.jpg',desc:'Egyptians Meal',options:[{label:'بوكس',price:165}]},
+{id:42,cat:'extreme',name:'رايز ستربس 205',img:'egyptians.jpg',desc:'4 استربس - 400جرام رز',options:[{label:'بوكس كبير',price:205,best:true}]},
+{id:43,cat:'extreme',name:'رايز ميل 205',img:'egyptians.jpg',desc:'2 فراخ - رز',options:[{label:'بوكس',price:205}]},
+{id:44,cat:'extreme',name:'سوبر تشيكن 215',img:'egyptians.jpg',desc:'2 فراخ + 2 استربس - رز',options:[{label:'بوكس',price:215}]},
+{id:45,cat:'extreme',name:'اكستريم ماكس 215',img:'egyptians.jpg',desc:'فراخ + زنجر - بطاطس - رز',options:[{label:'ماكس',price:215,best:true}]},
+{id:46,cat:'extreme',name:'بطاطس شيدر 70',img:'family-480.jpg',desc:'بطاطس - شيدر',options:[{label:'وسط',price:70},{label:'كبير',price:90,best:true}]},
+{id:47,cat:'extreme',name:'تشيزي فرايز 95',img:'family-480.jpg',desc:'بطاطس تشيزي + ريزو',options:[{label:'بوكس',price:95}]},
+{id:48,cat:'kids',name:'ستربس كيدز 100',img:'chicken-pieces.jpg',desc:'2 استربس - فرايز - عصير',options:[{label:'وجبة أطفال',price:100}]},
+{id:49,cat:'kids',name:'تشيكن كيدز 100',img:'chicken-pieces.jpg',desc:'قطعة فراخ - فرايز - عصير',options:[{label:'وجبة أطفال',price:100}]},
+{id:50,cat:'add',name:'بيف بيكون 15',img:'family-480.jpg',desc:'إضافة بيف بيكون',options:[{label:'واحدة',price:15},{label:'دبل',price:25,best:true}]},
+{id:51,cat:'add',name:'تركي مدخن 15',img:'family-480.jpg',desc:'إضافة تركي',options:[{label:'واحدة',price:15},{label:'دبل',price:25,best:true}]},
+{id:52,cat:'add',name:'جبن شيدر 15',img:'family-480.jpg',desc:'شيدر سايح',options:[{label:'واحدة',price:15},{label:'دبل',price:25,best:true}]},
+{id:53,cat:'add',name:'فرايز 35',img:'family-480.jpg',desc:'بطاطس مقرمشة',options:[{label:'وسط',price:35},{label:'كبير',price:55,best:true}]},
 ];
 
 let currentProduct=null, currentOption=null, currentQty=1;
-let cart=JSON.parse(localStorage.getItem('mixCartV3')||'[]');
+let cart=JSON.parse(localStorage.getItem('mixCartFinal')||'[]');
 
 function renderGrid(){
   const grid=document.getElementById('grid');
-  let html='';
-  let cats={sand:'🍔 ساندويتشات - دوس تختار سنجل ولا دبل',filler:'🥪 فيلر',wrap:'🌯 راب - دوس تختار',single:'🍗 سنجل',family:'👨‍👩‍👧‍👦 عائلي',extreme:'🔥 اكستريم',kids:'👶 أطفال',add:'➕ إضافات - سنجل ودبل'};
-  let lastCat='';
+  let html='',lastCat='';
+  let cats={sand:'🍔 ساندويتشات - دوس تختار سنجل ودبل',wrap:'🌯 راب',single:'🍗 سنجل',family:'👨‍👩‍👧‍👦 عائلي - 480',extreme:'🔥 اكستريم',kids:'👶 أطفال',add:'➕ إضافات'};
   products.forEach(p=>{
     if(p.cat!==lastCat){
-      html+=`<div class="label" data-cat="${p.cat}"><h3>${cats[p.cat]||p.cat}</h3><span>${products.filter(x=>x.cat===p.cat).length} صنف - دوس ع الصورة</span></div>`;
+      html+=`<div class="label" data-cat="${p.cat}"><h3>${cats[p.cat]||p.cat}</h3><span>${products.filter(x=>x.cat===p.cat).length} صنف</span></div>`;
       lastCat=p.cat;
     }
     let minPrice=Math.min(...p.options.map(o=>o.price));
     let maxPrice=Math.max(...p.options.map(o=>o.price));
     let priceText=minPrice===maxPrice?`${minPrice} EGP`:`${minPrice} / ${maxPrice} EGP`;
-    html+=`<div class="card" data-cat="${p.cat}" onclick="openProduct(${p.id})">
-      <img class="card-img" src="${p.img}" onerror="this.src='https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=400'">
-      <div class="card-body"><b>${p.name}</b><small>${p.desc.substring(0,60)}...</small>
-        <div class="row"><span class="price"><em>${priceText}</em></span><button class="add" onclick="event.stopPropagation();openProduct(${p.id})">👁️</button></div>
-      </div>
-    </div>`;
+    html+=`<div class="card" data-cat="${p.cat}" onclick="openProduct(${p.id})"><img class="card-img" src="${p.img}"><div class="card-body"><b>${p.name}</b><small>${p.desc}</small><div class="row"><span class="price"><em>${priceText}</em></span><button class="add" onclick="event.stopPropagation();openProduct(${p.id})">👁️</button></div></div></div>`;
   });
   grid.innerHTML=html;
 }
 
 function openProduct(id){
   currentProduct=products.find(p=>p.id===id);
-  if(!currentProduct)return;
   currentQty=1;
   currentOption=currentProduct.options[0];
   document.getElementById('pImg').src=currentProduct.img;
@@ -245,11 +218,7 @@ function openProduct(id){
   document.getElementById('pQty').innerText=1;
   let optHtml='';
   currentProduct.options.forEach((opt,idx)=>{
-    let active=idx===0?'active':'';
-    optHtml+=`<div class="option-item ${active}" onclick="selectOption(${idx})">
-      <div class="option-left"><div class="option-check">${idx===0?'✓':''}</div><div><div class="option-name">${opt.label} ${opt.best?'<span style="background:#ff1a1a;color:#fff;padding:2px 6px;border-radius:6px;font-size:9px;margin-right:6px">الأكثر طلبا</span>':''}</div><span class="option-note">${opt.note||''}</span></div></div>
-      <div class="option-price">${opt.price} EGP</div>
-    </div>`;
+    optHtml+=`<div class="option-item ${idx===0?'active':''}" onclick="selectOption(${idx})"><div style="display:flex;align-items:center;gap:10px"><div class="option-check">${idx===0?'✓':''}</div><div><div class="option-name">${opt.label} ${opt.best?'<span style="background:#ff1a1a;color:#fff;padding:2px 6px;border-radius:6px;font-size:9px">الأكثر طلبا</span>':''}</div><span class="option-note">${opt.note||''}</span></div></div><div class="option-price">${opt.price} EGP</div></div>`;
   });
   document.getElementById('pOptions').innerHTML=`<div class="option-title">📏 اختار الحجم - سنجل ولا دبل؟</div><div class="option-group">${optHtml}</div>`;
   updateProductPrice();
@@ -257,38 +226,23 @@ function openProduct(id){
 }
 function selectOption(idx){
   currentOption=currentProduct.options[idx];
-  document.querySelectorAll('.option-item').forEach((el,i)=>{
-    el.classList.toggle('active',i===idx);
-    el.querySelector('.option-check').innerText=i===idx?'✓':'';
-  });
+  document.querySelectorAll('.option-item').forEach((el,i)=>{el.classList.toggle('active',i===idx);el.querySelector('.option-check').innerText=i===idx?'✓':'';});
   updateProductPrice();
 }
-function pQtyChange(d){
-  currentQty+=d;
-  if(currentQty<1)currentQty=1;
-  if(currentQty>10)currentQty=10;
-  document.getElementById('pQty').innerText=currentQty;
-  updateProductPrice();
-}
-function updateProductPrice(){
-  if(!currentOption)return;
-  document.getElementById('pTotalPrice').innerText=(currentOption.price*currentQty)+' EGP';
-}
+function pQtyChange(d){currentQty+=d;if(currentQty<1)currentQty=1;if(currentQty>10)currentQty=10;document.getElementById('pQty').innerText=currentQty;updateProductPrice();}
+function updateProductPrice(){document.getElementById('pTotalPrice').innerText=(currentOption.price*currentQty)+' EGP';}
 function confirmAddToCart(){
   if(!currentProduct||!currentOption)return;
-  let name=`${currentProduct.name} - ${currentOption.label}`;
-  let existing=cart.find(c=>c.name===name);
-  if(existing){existing.qty+=currentQty;}
-  else{cart.push({id:Date.now()+Math.random(),name:name,baseName:currentProduct.name,option:currentOption.label,price:currentOption.price,qty:currentQty,img:currentProduct.img});}
-  localStorage.setItem('mixCartV3',JSON.stringify(cart));
+  let fullName=`${currentProduct.name} - ${currentOption.label}`;
+  let existing=cart.find(c=>c.fullName===fullName);
+  if(existing){
+    existing.qty+=currentQty;
+  } else {
+    cart.push({id:Date.now()+Math.random(),fullName:fullName,baseName:currentProduct.name,option:currentOption.label,price:currentOption.price,qty:currentQty,img:currentProduct.img});
+  }
+  localStorage.setItem('mixCartFinal',JSON.stringify(cart));
   updateUI();
   closeProduct();
-  // animation
-  let btn=document.querySelector('.add-to-cart-big');
-  let old=btn.innerHTML;
-  btn.innerHTML='✅ تمت الإضافة!';
-  btn.style.background='#00c950';
-  setTimeout(()=>{btn.innerHTML=old;btn.style.background='';},1000);
 }
 function closeProduct(){document.getElementById('productModal').classList.remove('open');}
 
@@ -299,29 +253,22 @@ function updateUI(){
   document.getElementById('footerCount').innerText=totalQty;
   document.getElementById('footerPrice').innerText=totalPrice+' EGP';
   document.getElementById('totalItems').innerText=totalQty+' قطعة';
+  document.getElementById('totalTypes').innerText=cart.length+' نوع';
   document.getElementById('subtotal').innerText=totalPrice+' EGP';
   document.getElementById('totalPrice').innerText=(totalPrice+(totalQty>0?30:0))+' EGP';
   let body=document.getElementById('cartBody');
   if(cart.length===0){
-    body.innerHTML='<div style="text-align:center;padding:30px;color:#ffffff55">🛒 سلتك فاضية<br><span style="font-size:11px">دوس على أي منتج واختار سنجل ولا دبل</span></div>';
+    body.innerHTML='<div style="text-align:center;padding:30px;color:#ffffff55">🛒 سلتك فاضية<br><span style="font-size:11px">نفس المنتج يتجمع - منتج مختلف سطر جديد تحته</span></div>';
   } else {
     let h='';
     cart.forEach((it,idx)=>{
-      h+=`<div class="item">
-        <img src="${it.img}">
-        <div style="flex:1"><b style="font-size:12px;color:#fff">${it.baseName||it.name}</b><br><span style="font-size:10px;color:#ffcc00;font-weight:800">${it.option}</span><br><span style="font-size:10px;color:#ffffff66">${it.price} EGP × ${it.qty}</span></div>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
-          <div style="display:flex;gap:4px;align-items:center;background:#0a0a0a;border:1px solid #ffffff14;border-radius:20px;padding:2px 6px"><button onclick="changeQty(${idx},-1)" style="width:22px;height:22px;border-radius:50%;border:none;background:#ffffff14;color:#fff">−</button><span style="color:#fff;font-weight:900;font-size:12px;min-width:14px;text-align:center">${it.qty}</span><button onclick="changeQty(${idx},1)" style="width:22px;height:22px;border-radius:50%;border:none;background:#fff;color:#000">+</button></div>
-          <div style="color:#ffcc00;font-weight:900;font-size:11px">${it.price*it.qty} EGP</div>
-          <button onclick="removeItem(${idx})" style="background:#ff1a1a22;color:#ff1a1a;border:none;padding:2px 8px;border-radius:10px;font-size:9px">حذف</button>
-        </div>
-      </div>`;
+      h+=`<div class="item"><img src="${it.img}"><div style="flex:1"><b style="font-size:13px;color:#fff">${it.baseName}</b><br><span style="font-size:11px;color:#ffcc00;font-weight:800">${it.option}</span><br><span style="font-size:10px;color:#ffffff66">${it.price} EGP × ${it.qty} = ${it.price*it.qty} EGP</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div style="display:flex;gap:4px;align-items:center;background:#0a0a0a;border:1px solid #ffffff14;border-radius:20px;padding:3px 8px"><button onclick="changeQty(${idx},-1)" style="width:24px;height:24px;border-radius:50%;border:none;background:#ffffff14;color:#fff">−</button><span style="color:#fff;font-weight:900;font-size:13px;min-width:20px;text-align:center">${it.qty}</span><button onclick="changeQty(${idx},1)" style="width:24px;height:24px;border-radius:50%;border:none;background:#fff;color:#000">+</button></div><div style="color:#ffcc00;font-weight:900;font-size:12px">${it.price*it.qty} EGP</div><button onclick="removeItem(${idx})" style="background:#ff1a1a22;color:#ff1a1a;border:none;padding:3px 10px;border-radius:10px;font-size:10px">حذف</button></div></div>`;
     });
     body.innerHTML=h;
   }
 }
-function changeQty(idx,d){if(cart[idx]){cart[idx].qty+=d;if(cart[idx].qty<=0)cart.splice(idx,1);localStorage.setItem('mixCartV3',JSON.stringify(cart));updateUI();}}
-function removeItem(idx){cart.splice(idx,1);localStorage.setItem('mixCartV3',JSON.stringify(cart));updateUI();}
+function changeQty(idx,d){if(cart[idx]){cart[idx].qty+=d;if(cart[idx].qty<=0)cart.splice(idx,1);localStorage.setItem('mixCartFinal',JSON.stringify(cart));updateUI();}}
+function removeItem(idx){cart.splice(idx,1);localStorage.setItem('mixCartFinal',JSON.stringify(cart));updateUI();}
 function openCart(){document.getElementById('cartModal').classList.add('open');updateUI();}
 function closeCart(){document.getElementById('cartModal').classList.remove('open');}
 function sendWhatsApp(){
@@ -334,9 +281,9 @@ function sendWhatsApp(){
   if(!name||!phone||!address||phone.length<11||address.length<10){alert('اكمل الاسم والموبايل والعنوان');return;}
   let totalQty=cart.reduce((s,i)=>s+i.qty,0);
   let totalPrice=cart.reduce((s,i)=>s+i.price*i.qty,0);
-  let msg=`🔥 *طلب جديد - MIX CHICKEN - سنجل ودبل* 🔥\n📞 16786\n━━━━━━━━━━━━━━\n\n👤 ${name}\n📱 1: ${phone}\n${phone2?`📱 2: ${phone2}\n`:''}📍 ${address}\n${notes?`📝 ${notes}\n`:''}\n━━━━━━━━━━━━━━\n🍗 *الطلب - سنجل ودبل (${cart.length} اختيارات - ${totalQty} قطعة):*\n`;
+  let msg=`🔥 *طلب جديد - MIX CHICKEN* 🔥\n📞 16786\n━━━━━━━━━━━━━━\n\n👤 ${name}\n📱 1: ${phone}\n${phone2?`📱 2: ${phone2}\n`:''}📍 ${address}\n${notes?`📝 ${notes}\n`:''}\n━━━━━━━━━━━━━━\n🍗 *الطلب (${cart.length} أصناف مختلفة - ${totalQty} قطعة):*\n`;
   cart.forEach((it,i)=>{msg+=`${i+1}. ${it.baseName} - ${it.option} × ${it.qty} = ${it.price*it.qty} EGP\n`;});
-  msg+=`\n━━━━━━━━━━━━━━\n📦 اختيارات: ${cart.length}\n🔢 قطع: ${totalQty}\n💰 أكل: ${totalPrice} EGP\n🛵 توصيل: 30 EGP\n💵 *إجمالي: ${totalPrice+30} EGP*\n\n⏰ ${new Date().toLocaleString('ar-EG')}`;
+  msg+=`\n━━━━━━━━━━━━━━\n📦 أنواع: ${cart.length}\n🔢 قطع: ${totalQty}\n💰 أكل: ${totalPrice} EGP\n🛵 توصيل: 30 EGP\n💵 *إجمالي: ${totalPrice+30} EGP*\n\n⏰ ${new Date().toLocaleString('ar-EG')}`;
   window.open('https://wa.me/201015861991?text='+encodeURIComponent(msg),'_blank');
 }
 document.querySelectorAll('.cat').forEach(cat=>{
