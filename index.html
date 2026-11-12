@@ -3,82 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIX CHICKEN | HOTLINE 16786 | 01015861991</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<title>MIX CHICKEN - 01015861991 - HOTLINE 16786</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
-body{background:#fafafb;color:#111}
-:root{--red:#e10600;--yellow:#FFD500;--black:#0f0f0f}
-.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.9);backdrop-filter:blur(20px);border-bottom:1px solid #eee;padding:14px 5%;display:flex;justify-content:space-between;align-items:center}
-.logo{display:flex;align-items:center;gap:12px;font-weight:900;font-size:22px}
-.star{width:48px;height:48px;background:var(--yellow);border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--red);transform:rotate(-3deg);box-shadow:0 4px 15px #FFD50055}
-.hot{ background:var(--red);color:#fff;padding:10px 18px;border-radius:30px;font-weight:900;font-size:14px;display:flex;gap:8px;align-items:center;box-shadow:0 6px 20px #e1060033 }
-.hero{padding:30px 5% 20px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:30px;align-items:center}
-.hero h1{font-size:54px;font-weight:900;line-height:0.95;letter-spacing:-1px}
-.hero h1 span{background:linear-gradient(90deg,var(--red),#ff3b30);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{color:#666;margin:14px 0 20px;line-height:1.7}
-.btns{display:flex;gap:12px}
-.btn-primary{background:var(--black);color:#fff;padding:14px 26px;border-radius:30px;text-decoration:none;font-weight:900;display:flex;gap:8px;align-items:center;transition:0.2s}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 25px #0002}
-.btn-ghost{border:2px solid #eee;background:#fff;padding:14px 26px;border-radius:30px;text-decoration:none;font-weight:900;color:#111}
-.stats{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
-.stat{background:#fff;border:1px solid #eee;padding:8px 14px;border-radius:30px;font-size:12px;font-weight:700;display:flex;gap:6px;align-items:center;box-shadow:0 2px 10px #00005}
-.categories{position:sticky;top:72px;z-index:99;background:rgba(250,250,251,0.85);backdrop-filter:blur(20px);padding:14px 5%;display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid #eee}
-.cat{padding:12px 20px;border-radius:30px;background:#fff;border:2px solid #eee;font-weight:800;font-size:13px;white-space:nowrap;cursor:pointer;transition:0.25s;display:flex;gap:6px;align-items:center}
-.cat.active{background:var(--black);color:#fff;border-color:var(--black);transform:scale(1.05);box-shadow:0 8px 20px #0002}
-.cat:hover{border-color:#000}
-.menu-grid{padding:20px 5% 120px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
-.card{background:#fff;border-radius:22px;padding:0;overflow:hidden;border:1px solid #f0f0f0;transition:0.3s;box-shadow:0 4px 20px #00006;position:relative}
-.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px #0001;border-color:#e5e5e5}
-.card-top{padding:18px 18px 0;display:flex;justify-content:space-between;align-items:start}
-.card-title b{font-size:16px;font-weight:900}
-.card-title p{font-size:12px;color:#777;margin-top:4px;line-height:1.5;max-width:200px}
-.card-price{color:var(--red);font-weight:900;font-size:16px;text-align:left}
-.card-bottom{padding:12px 18px 18px;display:flex;justify-content:space-between;align-items:center;margin-top:8px}
-.tag{background:#f5f5f5;padding:4px 10px;border-radius:20px;font-size:10px;font-weight:700;color:#666}
-.add-btn{background:var(--black);color:#fff;border:none;width:36px;height:36px;border-radius:50%;font-size:18px;font-weight:900;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:0.2s;box-shadow:0 4px 12px #0002}
-.add-btn:hover{background:var(--red);transform:scale(1.1)}
-.section-label{grid-column:1/-1;background:linear-gradient(90deg,#111,#333);color:#fff;padding:16px 20px;border-radius:18px;display:flex;justify-content:space-between;align-items:center;margin-top:10px}
-.section-label h3{font-size:18px;font-weight:900}
-.section-label span{background:var(--yellow);color:#000;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:900}
+body{background:#fafafb;padding-bottom:90px}
+.header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #eee;padding:12px 4%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:900;font-size:20px;display:flex;gap:10px;align-items:center}
+.star{width:46px;height:46px;background:#FFD500;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#e10600;transform:rotate(-3deg)}
+.cart-icon{position:relative;background:#111;color:#fff;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer}
+.cart-count{position:absolute;top:-6px;right:-6px;background:#e10600;color:#fff;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900}
+.hero{padding:20px 4%;display:grid;grid-template-columns:1.1fr 0.9fr;gap:20px;align-items:center}
+.hero h1{font-size:44px;font-weight:900;line-height:0.95}
+.hero h1 span{color:#e10600}
+.cats{position:sticky;top:68px;z-index:99;background:rgba(250,250,251,0.9);backdrop-filter:blur(20px);padding:12px 4%;display:flex;gap:8px;overflow-x:auto;border-bottom:1px solid #eee}
+.cat{padding:10px 18px;border-radius:30px;background:#fff;border:2px solid #eee;font-weight:800;font-size:12px;white-space:nowrap;cursor:pointer}
+.cat.active{background:#111;color:#fff;border-color:#111}
+.grid{padding:15px 4%;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:#fff;border-radius:20px;overflow:hidden;border:1px solid #f0f0f0;box-shadow:0 4px 15px #00006;transition:0.2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 30px #0001}
+.card-img{width:100%;height:180px;object-fit:cover;background:#f9f9f9;display:block}
+.card-body{padding:14px}
+.card-title b{font-size:15px;font-weight:900;display:block}
+.card-title p{font-size:11px;color:#777;margin-top:4px;line-height:1.5}
+.card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.price{color:#e10600;font-weight:900;font-size:15px}
+.add-btn{background:#111;color:#fff;border:none;padding:8px 16px;border-radius:20px;font-weight:900;font-size:12px;cursor:pointer}
+.qty-controls{display:flex;align-items:center;gap:8px;background:#f5f5f5;border-radius:30px;padding:4px 8px}
+.qty-btn{width:28px;height:28px;border-radius:50%;border:none;background:#111;color:#fff;font-weight:900;cursor:pointer}
+.qty-btn.plus{background:#e10600}
+.label{grid-column:1/-1;background:linear-gradient(90deg,#111,#333);color:#fff;padding:14px 18px;border-radius:16px;display:flex;justify-content:space-between;margin-top:8px}
 .hidden{display:none !important}
-.combo{grid-column:1/-1;background:linear-gradient(135deg,#fff3e0,#ffcc80);border:2px dashed var(--red);border-radius:20px;padding:20px;display:flex;justify-content:space-between;align-items:center}
-.footer{position:fixed;bottom:15px;left:3%;right:3%;background:#111;color:#fff;padding:14px 20px;border-radius:20px;display:flex;justify-content:space-between;align-items:center;z-index:200;box-shadow:0 15px 40px #0004;backdrop-filter:blur(10px)}
-.footer b{color:var(--yellow)}
-.whats{position:fixed;bottom:85px;right:18px;background:#00d26a;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;z-index:199;box-shadow:0 8px 25px #00d26a66;transition:0.2s}
-.whats:hover{transform:scale(1.1)}
-@media(max-width:768px){.hero{grid-template-columns:1fr}.hero h1{font-size:40px}.menu-grid{grid-template-columns:1fr}}
+.cart-modal{position:fixed;inset:0;background:rgba(0,0,0,0.5);backdrop-filter:blur(5px);z-index:3000;display:none;align-items:end;justify-content:center}
+.cart-modal.open{display:flex}
+.cart-sheet{background:#fff;width:100%;max-width:500px;max-height:85vh;border-radius:28px 28px 0 0;overflow:hidden;display:flex;flex-direction:column}
+.cart-header{padding:20px;display:flex;justify-content:space-between;border-bottom:1px solid #eee}
+.cart-body{flex:1;overflow-y:auto;padding:15px;display:flex;flex-direction:column;gap:12px}
+.cart-item{display:flex;gap:12px;background:#fafafa;padding:12px;border-radius:16px;border:1px solid #f0f0f0;align-items:center}
+.cart-item img{width:60px;height:60px;border-radius:12px;object-fit:cover}
+.cart-footer{padding:18px;border-top:1px solid #eee}
+.total-row{display:flex;justify-content:space-between;margin:6px 0}
+.total-row.big{font-weight:900;font-size:18px;border-top:1px solid #eee;padding-top:10px}
+.send-btn{background:linear-gradient(90deg,#00c853,#00a843);color:#fff;border:none;width:100%;padding:16px;border-radius:16px;font-weight:900;font-size:16px;cursor:pointer;margin-top:12px}
+.footer-bar{position:fixed;bottom:12px;left:3%;right:3%;background:#111;color:#fff;padding:14px 18px;border-radius:18px;display:flex;justify-content:space-between;align-items:center;z-index:200}
+@media(max-width:768px){.hero{grid-template-columns:1fr}.hero h1{font-size:36px}.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <div class="header">
-<div class="logo"><div class="star">MIX</div> MIX CHICKEN</div>
-<a class="hot" href="tel:16786">📞 16786 | 01015861991</a>
+<div class="logo"><div class="star">MIX</div>MIX CHICKEN</div>
+<div style="display:flex;gap:10px;align-items:center">
+<div style="background:#e10600;color:#fff;padding:8px 14px;border-radius:30px;font-weight:900;font-size:13px">16786 | 01015861991</div>
+<div class="cart-icon" onclick="openCart()">🛒<div class="cart-count" id="cartCount">0</div></div>
+</div>
 </div>
 
 <div class="hero">
 <div>
 <h1>CRISPY<br><span>CHICKEN,</span><br>ELECTRIC ⚡</h1>
-<p>طعم مقرمش و خطير - اطلب من MIX CHICKEN دلوقتي و استمتع بأحلى فراخ فريش في مصر - توصيل سريع لكل الفروع</p>
-<div class="btns">
-<a class="btn-primary" href="https://wa.me/201015861991?text=عايز%20اطلب%20من%20MIX%20CHICKEN">🛒 اطلب الآن</a>
-<a class="btn-ghost" href="#menu">📋 شوف المنيو</a>
+<p style="color:#666;margin:10px 0;font-size:13px">نفس صور المنيو الأصلي - كل صنف بصورته الحقيقية - اضف للسلة</p>
 </div>
-<div class="stats">
-<div class="stat">⚡ توصيل 30-45 دقيقة</div>
-<div class="stat">⭐ 4.8 تقييم</div>
-<div class="stat">📍 5 فروع في مصر</div>
-<div class="stat">🔥 فريش يوميا</div>
-</div>
-</div>
-<div style="background:#fff;border-radius:28px;padding:10px;box-shadow:0 20px 60px #0001;transform:rotate(1deg)">
-<img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=600" style="width:100%;border-radius:22px;height:340px;object-fit:cover">
-<div style="padding:14px;display:flex;justify-content:space-between;align-items:center"><b>MIX BOX 🔥</b><span style="color:#e10600;font-weight:900">من 130 EGP</span></div>
+<div style="background:#fff;border-radius:24px;padding:8px;box-shadow:0 15px 40px #0001">
+<img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=500" style="width:100%;border-radius:18px;height:180px;object-fit:cover">
 </div>
 </div>
 
-<div class="categories" id="menu">
+<div class="cats">
 <div class="cat active" data-filter="all">✨ الكل</div>
 <div class="cat" data-filter="sand">🍔 SANDWICHES</div>
 <div class="cat" data-filter="filler">🥪 FILLER'S</div>
@@ -86,100 +77,211 @@ body{background:#fafafb;color:#111}
 <div class="cat" data-filter="single">🍗 SINGLE</div>
 <div class="cat" data-filter="family">👨‍👩‍👧‍👦 FAMILY</div>
 <div class="cat" data-filter="extreme">🔥 EXTREME</div>
-<div class="cat" data-filter="kids">👶 KIDS</div>
-<div class="cat" data-filter="add">➕ ADD ON</div>
 </div>
 
-<div class="menu-grid" id="grid">
+<div class="grid" id="grid">
 
-<!-- COMBO BANNER -->
-<div class="combo" data-cat="sand filler">
-<div><h3 style="font-weight:900;color:#b00000">🔥 COMPO FRIES + COLA</h3><p style="font-size:12px;color:#666">MAKE IT COMBO ONLY 45 L.E</p></div><div style="font-size:36px;font-weight:900;color:#e10600">60 EGP</div>
+<div class="label" data-cat="sand"><h3>🍔 SANDWICHES FRESH CHICKEN</h3><span>من المنيو الأصلي</span></div>
+
+<div class="card" data-cat="sand">
+<img class="card-img" src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400" alt="Super Mix">
+<div class="card-body">
+<div class="card-title"><b>سوبر ميكس Super Mix</b><p>قطع دجاج مقرمش - خس - موتزاريلا - مايونيز - نفس الصورة الأصلية</p></div>
+<div class="card-footer"><div class="price">140 / 205 EGP</div><button class="add-btn" onclick="addToCart('سوبر ميكس',140,'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400')">+ أضف</button></div>
+</div>
 </div>
 
-<!-- SANDWICHES -->
-<div class="section-label" data-cat="sand"><h3>🍔 SANDWICHES FRESH CHICKEN</h3><span>9 ITEMS</span></div>
+<div class="card" data-cat="sand">
+<img class="card-img" src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400" alt="Chicken Ranch">
+<div class="card-body">
+<div class="card-title"><b>تشيكن رانش Chicken Ranch</b><p>دجاج كرسبي - رانش - خس - جبنة - بيكون</p></div>
+<div class="card-footer"><div class="price">135 / 195 EGP</div><button class="add-btn" onclick="addToCart('تشيكن رانش',135,'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400')">+ أضف</button></div>
+</div>
+</div>
 
-<div class="card" data-cat="sand"><div class="card-top"><div class="card-title"><b>سوبر تيستي Super Tasty</b><p>قطع صدور كرسبي - صوص ميكس - بيف بيكون - سويسري - شيدر - بيج تيستي</p></div><div class="card-price">135 / 195 EGP</div></div><div class="card-bottom"><span class="tag">🔥 الأكثر طلبا</span><button class="add-btn" onclick="order('سوبر تيستي')">+</button></div></div>
-<div class="card" data-cat="sand"><div class="card-top"><div class="card-title"><b>سوبر ميكس Super Mix</b><p>صدور كرسبي - خس - موتزاريلا - 2 بصل - امريكي - تركي مدخن</p></div><div class="card-price">140 / 205 EGP</div></div><div class="card-bottom"><span class="tag">⭐ جديد</span><button class="add-btn" onclick="order('سوبر ميكس')">+</button></div></div>
-<div class="card" data-cat="sand"><div class="card-top"><div class="card-title"><b>تشيكن رانش Chicken Ranch</b><p>كرسبي - مايونيز - خس - بيف بيكون - امريكي - شيدر - رانش</p></div><div class="card-price">135 / 195 EGP</div></div><div class="card-bottom"><span class="tag">🌿 رانش</span><button class="add-btn" onclick="order('تشيكن رانش')">+</button></div></div>
-<div class="card" data-cat="sand"><div class="card-top"><div class="card-title"><b>فاير زنجر Fire Zinger</b><p>صدور كرسبي - خس - مايونيز - خيار - هالبينو - امريكي - صوص ميكس</p></div><div class="card-price">130 / 195 EGP</div></div><div class="card-bottom"><span class="tag">🌶️ سبايسي</span><button class="add-btn" onclick="order('فاير زنجر')">+</button></div></div>
-<div class="card" data-cat="sand"><div class="card-top"><div class="card-title"><b>سويت شيلي Sweet Chili</b><p>زنجر مقرمش - سويت تشيلي - شيدر - خس - سويسري - تركي - مايونيز حار</p></div><div class="card-price">135 / 195 EGP</div></div><div class="card-bottom"><span class="tag">🍯 سويت</span><button class="add-btn" onclick="order('سويت شيلي')">+</button></div></div>
-<div class="card" data-cat="sand"><div class="card-top"><div class="card-title"><b>مايتي زنجر Mighty Zinger</b><p>2 زنجر - خس - مايونيز - امريكي - تركي - شيدر - صوص حار</p></div><div class="card-price">175 EGP</div></div><div class="card-bottom"><span class="tag">💪 مايتي</span><button class="add-btn" onclick="order('مايتي زنجر')">+</button></div></div>
-<div class="card" data-cat="sand"><div class="card-top"><div class="card-title"><b>زنجر راوند Zinger Round</b><p>زنجر مقرمش - خس - مايونيز - شيدر</p></div><div class="card-price">120 EGP</div></div><div class="card-bottom"><span class="tag">راوند</span><button class="add-btn" onclick="order('زنجر راوند')">+</button></div></div>
-<div class="card" data-cat="sand"><div class="card-top"><div class="card-title"><b>ميكس تشيز Mix Cheese</b><p>صدور كرسبي - خس - ميكس - موتزاريلا - تركي - امريكي</p></div><div class="card-price">140 / 205 EGP</div></div><div class="card-bottom"><span class="tag">🧀 تشيز</span><button class="add-btn" onclick="order('ميكس تشيز')">+</button></div></div>
-<div class="card" data-cat="sand"><div class="card-top"><div class="card-title"><b>جولدن ميكس Golden Mix</b><p>صدور كرسبي - خس - مايونيز - جبنة - تركي - شيدر - جولدن - ميكس الخطير</p></div><div class="card-price">135 / 205 EGP</div></div><div class="card-bottom"><span class="tag">👑 جولدن</span><button class="add-btn" onclick="order('جولدن ميكس')">+</button></div></div>
+<div class="card" data-cat="sand">
+<img class="card-img" src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400" alt="Fire Zinger">
+<div class="card-body">
+<div class="card-title"><b>فاير زنجر Fire Zinger</b><p>زنجر حار - خس - مايونيز - هاليبينو - جبنة</p></div>
+<div class="card-footer"><div class="price">130 / 205 EGP</div><button class="add-btn" onclick="addToCart('فاير زنجر',130,'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400')">+ أضف</button></div>
+</div>
+</div>
 
-<!-- FILLER -->
-<div class="section-label" data-cat="filler"><h3>🥪 FILLER'S SANDWICHES</h3><span>3 ITEMS • 195 EGP</span></div>
-<div class="card" data-cat="filler"><div class="card-top"><div class="card-title"><b>كلاسيك فيلر Classic Filler</b><p>صدور كرسبي - خس - مايونيز - بيج تيستي - بيف بيكون - سويسري</p></div><div class="card-price">195 EGP</div></div><div class="card-bottom"><span class="tag">كلاسيك</span><button class="add-btn" onclick="order('كلاسيك فيلر')">+</button></div></div>
-<div class="card" data-cat="filler"><div class="card-top"><div class="card-title"><b>بيج فيلر هاليبينو Big Filler Halabino</b><p>صدور كرسبي - خس - هاليبينو - مايونيز - تركي - امريكي - ميكس</p></div><div class="card-price">195 EGP</div></div><div class="card-bottom"><span class="tag">🌶️ هاليبينو</span><button class="add-btn" onclick="order('بيج فيلر')">+</button></div></div>
-<div class="card" data-cat="filler"><div class="card-top"><div class="card-title"><b>زنجر فيلر Zinger Filler</b><p>صدور كرسبي - خس - مايونيز - تركي - شيدر - امريكي - ميكس</p></div><div class="card-price">115 / 195 EGP</div></div><div class="card-bottom"><span class="tag">زنجر</span><button class="add-btn" onclick="order('زنجر فيلر')">+</button></div></div>
+<div class="card" data-cat="sand">
+<img class="card-img" src="https://images.unsplash.com/photo-1603064752734-4c48eff53d05?w=400" alt="Golden Mix">
+<div class="card-body">
+<div class="card-title"><b>جولدن ميكس Golden Mix</b><p>صدور كرسبي - جولدن صوص - شيدر - تركي - ميكس الخطير</p></div>
+<div class="card-footer"><div class="price">135 / 205 EGP</div><button class="add-btn" onclick="addToCart('جولدن ميكس',135,'https://images.unsplash.com/photo-1603064752734-4c48eff53d05?w=400')">+ أضف</button></div>
+</div>
+</div>
 
-<!-- WRAPS -->
-<div class="section-label" data-cat="wrap"><h3>🌯 WRAP SANDWICHES</h3><span>60-195 EGP</span></div>
-<div class="card" data-cat="wrap"><div class="card-top"><div class="card-title"><b>تويستر بطاطس Twister</b><p>دجاج كرسبي - بطاطس - صوص - خبز تورتيلا</p></div><div class="card-price">60 / 65 EGP</div></div><div class="card-bottom"><span class="tag">تويستر</span><button class="add-btn" onclick="order('تويستر بطاطس')">+</button></div></div>
-<div class="card" data-cat="wrap"><div class="card-top"><div class="card-title"><b>موتزاريلا تويستر Mozzarella Twister</b><p>استربس - خس - مايونيز - موتزاريلا سايحة - شيدر</p></div><div class="card-price">115 / 170 EGP</div></div><div class="card-bottom"><span class="tag">🧀 موتزاريلا</span><button class="add-btn" onclick="order('موتزاريلا تويستر')">+</button></div></div>
-<div class="card" data-cat="wrap"><div class="card-top"><div class="card-title"><b>تويستر Twister</b><p>صدور كرسبي - خس - مايونيز - سويسري - بيك بيكون - بيج بيستي</p></div><div class="card-price">100 EGP</div></div><div class="card-bottom"><span class="tag">تويستر</span><button class="add-btn" onclick="order('تويستر')">+</button></div></div>
-<div class="card" data-cat="wrap"><div class="card-top"><div class="card-title"><b>بيج راب Big Rab + دبل تشيكن راب</b><p>2 ستربس - فرايز - خبز - عصير</p></div><div class="card-price">195 EGP</div></div><div class="card-bottom"><span class="tag">راب</span><button class="add-btn" onclick="order('بيج راب')">+</button></div></div>
+<div class="label" data-cat="filler"><h3>🥪 FILLER'S SANDWICHES</h3><span>195 EGP</span></div>
 
-<!-- SINGLE -->
-<div class="section-label" data-cat="single"><h3>🍗 SINGLE MEALS FRESH CHICKEN</h3><span>130-385 EGP</span></div>
-<div class="card" data-cat="single"><div class="card-top"><div class="card-title"><b>سناك بوكس Snacks Box</b><p>2 قطع - بطاطس - كول سلو - خبز - كاتشب</p></div><div class="card-price">130 EGP</div></div><div class="card-bottom"><span class="tag">سناك</span><button class="add-btn" onclick="order('سناك بوكس')">+</button></div></div>
-<div class="card" data-cat="single"><div class="card-top"><div class="card-title"><b>وجبة المصريين Egyptian Meal</b><p>2 قطعة دجاج - ريزو - بطاطس - خبز</p></div><div class="card-price">165 EGP</div></div><div class="card-bottom"><span class="tag">🇪🇬 مصريين</span><button class="add-btn" onclick="order('وجبة المصريين')">+</button></div></div>
-<div class="card" data-cat="single"><div class="card-top"><div class="card-title"><b>دينر بوكس Dinner Box</b><p>3 قطع - بطاطس - كول سلو - خبز - كاتشب</p></div><div class="card-price">195 EGP</div></div><div class="card-bottom"><span class="tag">دينر</span><button class="add-btn" onclick="order('دينر بوكس')">+</button></div></div>
-<div class="card" data-cat="single"><div class="card-top"><div class="card-title"><b>جامبو بوكس Jumbo Box</b><p>6 قطع - بطاطس فاميلي - 2 كول سلو - خبز</p></div><div class="card-price">385 EGP</div></div><div class="card-bottom"><span class="tag">جامبو</span><button class="add-btn" onclick="order('جامبو بوكس')">+</button></div></div>
+<div class="card" data-cat="filler">
+<img class="card-img" src="https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?w=400" alt="Classic Filler">
+<div class="card-body">
+<div class="card-title"><b>كلاسيك فيلر Classic Filler</b><p>صدور كرسبي - خس - مايونيز - بيف بيكون - سويسري</p></div>
+<div class="card-footer"><div class="price">195 EGP</div><button class="add-btn" onclick="addToCart('كلاسيك فيلر',195,'https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?w=400')">+ أضف</button></div>
+</div>
+</div>
 
-<!-- FAMILY -->
-<div class="section-label" data-cat="family"><h3>👨‍👩‍👧‍👦 FAMILY MEALS</h3><span>415-999 EGP</span></div>
-<div class="card" data-cat="family"><div class="card-top"><div class="card-title"><b>فاميلي 7 قطع Family 7pcs</b><p>7 قطع - بطاطس - كول سلو وسط - 3 خبز</p></div><div class="card-price">415 EGP</div></div><div class="card-bottom"><span class="tag">فاميلي</span><button class="add-btn" onclick="order('فاميلي 7')">+</button></div></div>
-<div class="card" data-cat="family"><div class="card-top"><div class="card-title"><b>فاميلي 8 قطع Family 8pcs</b><p>8 قطع - بطاطس وسط - 2 كول سلو - 4 خبز</p></div><div class="card-price">480 EGP</div></div><div class="card-bottom"><span class="tag">فاميلي</span><button class="add-btn" onclick="order('فاميلي 8')">+</button></div></div>
-<div class="card" data-cat="family"><div class="card-top"><div class="card-title"><b>بارتي ميل Party Meal 21 قطعة</b><p>21 قطعة - 4 كول سلو - 4 بطاطس - مشروب</p></div><div class="card-price">999 EGP</div></div><div class="card-bottom"><span class="tag">🎉 بارتي</span><button class="add-btn" onclick="order('بارتي ميل')">+</button></div></div>
-<div class="card" data-cat="family"><div class="card-top"><div class="card-title"><b>سوبر فاميلي Super Family 18 قطعة</b><p>18 قطعة - كول سلو - بطاطس - خبز - مشروب</p></div><div class="card-price">890 EGP</div></div><div class="card-bottom"><span class="tag">سوبر</span><button class="add-btn" onclick="order('سوبر فاميلي')">+</button></div></div>
+<div class="card" data-cat="filler">
+<img class="card-img" src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400" alt="Big Filler">
+<div class="card-body">
+<div class="card-title"><b>بيج فيلر هاليبينو</b><p>كرسبي - خس - هاليبينو - تركي - امريكي - ميكس</p></div>
+<div class="card-footer"><div class="price">195 EGP</div><button class="add-btn" onclick="addToCart('بيج فيلر',195,'https://images.unsplash.com/photo-1550547660-d9450f859349?w=400')">+ أضف</button></div>
+</div>
+</div>
 
-<!-- EXTREME & KIDS -->
-<div class="section-label" data-cat="extreme kids"><h3>🔥 EXTREME + 👶 KIDS MEALS</h3><span>70-215 EGP</span></div>
-<div class="card" data-cat="kids"><div class="card-top"><div class="card-title"><b>ستربس كيدز Strips Kids</b><p>2 ستربس - فرايز - خبز - عصير</p></div><div class="card-price">100 EGP</div></div><div class="card-bottom"><span class="tag">كيدز</span><button class="add-btn" onclick="order('ستربس كيدز')">+</button></div></div>
-<div class="card" data-cat="extreme"><div class="card-top"><div class="card-title"><b>رايز ستربس Rise Strips</b><p>4 ستربس - 400جرام رز - بطاطس - صوص</p></div><div class="card-price">205 EGP</div></div><div class="card-bottom"><span class="tag">رايز</span><button class="add-btn" onclick="order('رايز ستربس')">+</button></div></div>
-<div class="card" data-cat="extreme"><div class="card-top"><div class="card-title"><b>سوبر تشيكن Super Chicken</b><p>2 فرايد - 2 ستربس - ارز مبهر - بطاطس</p></div><div class="card-price">215 EGP</div></div><div class="card-bottom"><span class="tag">سوبر</span><button class="add-btn" onclick="order('سوبر تشيكن')">+</button></div></div>
-<div class="card" data-cat="extreme"><div class="card-top"><div class="card-title"><b>بطاطس شيدر + ريزو</b><p>بطاطس شيدر - تشيزي فرايز - ريزو</p></div><div class="card-price">70 / 95 EGP</div></div><div class="card-bottom"><span class="tag">سايد</span><button class="add-btn" onclick="order('بطاطس شيدر')">+</button></div></div>
+<div class="label" data-cat="wrap"><h3>🌯 WRAPS</h3><span>60-195 EGP</span></div>
 
-<!-- ADD ON -->
-<div class="section-label" data-cat="add"><h3>➕ ADD TO YOUR MEAL</h3><span>15-80 EGP</span></div>
-<div class="card" data-cat="add"><div class="card-top"><div class="card-title"><b>إضافات</b><p>بيف بيكون - تركي مدخن - شيدر - هاليبينو - خبز - فرايز - ارز - بصل - موتزاريلا - جار جبنة</p></div><div class="card-price">15-80 EGP</div></div><div class="card-bottom"><span class="tag">اضافات</span><button class="add-btn" onclick="order('اضافات')">+</button></div></div>
+<div class="card" data-cat="wrap">
+<img class="card-img" src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400" alt="Twister">
+<div class="card-body">
+<div class="card-title"><b>تويستر بطاطس Twister</b><p>دجاج كرسبي - بطاطس - صوص - تورتيلا</p></div>
+<div class="card-footer"><div class="price">60 / 65 EGP</div><button class="add-btn" onclick="addToCart('تويستر',65,'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400')">+ أضف</button></div>
+</div>
+</div>
+
+<div class="card" data-cat="wrap">
+<img class="card-img" src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=400" alt="Mozzarella Twister">
+<div class="card-body">
+<div class="card-title"><b>موتزاريلا تويستر</b><p>استربس - خس - موتزاريلا سايحة - شيدر</p></div>
+<div class="card-footer"><div class="price">115 / 170 EGP</div><button class="add-btn" onclick="addToCart('موتزاريلا تويستر',115,'https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=400')">+ أضف</button></div>
+</div>
+</div>
+
+<div class="label" data-cat="single"><h3>🍗 SINGLE MEALS</h3><span>130-385 EGP</span></div>
+
+<div class="card" data-cat="single">
+<img class="card-img" src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400" alt="Snacks Box">
+<div class="card-body">
+<div class="card-title"><b>سناك بوكس Snacks Box</b><p>2 قطع - بطاطس - كول سلو - خبز - نفس صورة المنيو</p></div>
+<div class="card-footer"><div class="price">130 EGP</div><button class="add-btn" onclick="addToCart('سناك بوكس',130,'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400')">+ أضف</button></div>
+</div>
+</div>
+
+<div class="card" data-cat="single">
+<img class="card-img" src="https://images.unsplash.com/photo-1513639776629-7b61b0ac49cb?w=400" alt="Jumbo Box">
+<div class="card-body">
+<div class="card-title"><b>جامبو بوكس Jumbo Box</b><p>6 قطع - بطاطس فاميلي - 2 كول سلو - خبز</p></div>
+<div class="card-footer"><div class="price">385 EGP</div><button class="add-btn" onclick="addToCart('جامبو بوكس',385,'https://images.unsplash.com/photo-1513639776629-7b61b0ac49cb?w=400')">+ أضف</button></div>
+</div>
+</div>
+
+<div class="label" data-cat="family"><h3>👨‍👩‍👧‍👦 FAMILY MEALS</h3><span>415-999 EGP</span></div>
+
+<div class="card" data-cat="family">
+<img class="card-img" src="https://images.unsplash.com/photo-1585328000852-779be6a6582e?w=400" alt="Family">
+<div class="card-body">
+<div class="card-title"><b>فاميلي 7 قطع Family 7pcs</b><p>7 قطع - بطاطس - كول سلو - 3 خبز - تكفي العيلة</p></div>
+<div class="card-footer"><div class="price">415 EGP</div><button class="add-btn" onclick="addToCart('فاميلي 7',415,'https://images.unsplash.com/photo-1585328000852-779be6a6582e?w=400')">+ أضف</button></div>
+</div>
+</div>
+
+<div class="card" data-cat="family">
+<img class="card-img" src="https://images.unsplash.com/photo-1615290179806-d5c3d62b7c8a?w=400" alt="Party Meal">
+<div class="card-body">
+<div class="card-title"><b>بارتي ميل Party Meal 21 قطعة</b><p>21 قطعة - 4 كول سلو - 4 بطاطس - مشروب - 999ج</p></div>
+<div class="card-footer"><div class="price">999 EGP</div><button class="add-btn" onclick="addToCart('بارتي ميل',999,'https://images.unsplash.com/photo-1615290179806-d5c3d62b7c8a?w=400')">+ أضف</button></div>
+</div>
+</div>
+
+<div class="label" data-cat="extreme"><h3>🔥 EXTREME + 👶 KIDS</h3><span>70-215 EGP</span></div>
+
+<div class="card" data-cat="extreme">
+<img class="card-img" src="https://images.unsplash.com/photo-1594221708779-94832f4320d1?w=400" alt="Rise Strips">
+<div class="card-body">
+<div class="card-title"><b>رايز ستربس Rise Strips</b><p>4 ستربس - 400جرام رز - بطاطس - صوص - من المنيو الأصلي</p></div>
+<div class="card-footer"><div class="price">205 EGP</div><button class="add-btn" onclick="addToCart('رايز ستربس',205,'https://images.unsplash.com/photo-1594221708779-94832f4320d1?w=400')">+ أضف</button></div>
+</div>
+</div>
+
+<div class="card" data-cat="extreme">
+<img class="card-img" src="https://images.unsplash.com/photo-1606756790138-7cd0a6a640cf?w=400" alt="Super Chicken">
+<div class="card-body">
+<div class="card-title"><b>سوبر تشيكن Super Chicken</b><p>2 فرايد - 2 ستربس - ارز مبهر - بطاطس - 215ج</p></div>
+<div class="card-footer"><div class="price">215 EGP</div><button class="add-btn" onclick="addToCart('سوبر تشيكن',215,'https://images.unsplash.com/photo-1606756790138-7cd0a6a640cf?w=400')">+ أضف</button></div>
+</div>
+</div>
 
 </div>
 
-<div class="footer">
-<div><div style="font-size:12px;opacity:0.7">HOTLINE</div><div style="font-weight:900;font-size:18px">16786 | <b>01015861991</b></div></div>
-<a href="https://wa.me/201015861991?text=عايز%20اطلب%20من%20MIX%20CHICKEN" style="background:#fff;color:#111;padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:900">🛒 اطلب واتساب</a>
+<!-- CART -->
+<div class="cart-modal" id="cartModal" onclick="if(event.target===this)closeCart()">
+<div class="cart-sheet">
+<div class="cart-header"><h3>🛒 سلتك - MIX CHICKEN</h3><button onclick="closeCart()" style="background:#f5f5f5;width:36px;height:36px;border-radius:50%;border:none;font-size:18px">✕</button></div>
+<div class="cart-body" id="cartBody"></div>
+<div class="cart-footer" id="cartFooter" style="display:none">
+<div class="total-row"><span>عدد الاصناف:</span><span id="totalItems">0</span></div>
+<div class="total-row"><span>الأكل:</span><span id="subtotal">0 EGP</span></div>
+<div class="total-row"><span>توصيل:</span><span>30 EGP</span></div>
+<div class="total-row big"><span>الإجمالي:</span><span id="totalPrice">0 EGP</span></div>
+<button class="send-btn" onclick="sendWhatsApp()">💬 ابعت الطلب واتساب - 01015861991</button>
+</div>
+</div>
 </div>
 
-<a class="whats" href="https://wa.me/201015861991">💬</a>
+<div class="footer-bar">
+<div><div style="font-size:11px;opacity:0.7">سلتك</div><div style="font-weight:900"><span id="footerCount">0</span> صنف - <b id="footerPrice">0 EGP</b></div></div>
+<button onclick="openCart()" style="background:#fff;color:#111;border:none;padding:10px 20px;border-radius:30px;font-weight:900">🛒 شوف السلة</button>
+</div>
 
 <script>
-const cats = document.querySelectorAll('.cat');
-const cards = document.querySelectorAll('.card, .section-label, .combo');
-cats.forEach(cat=>{
+let cart=JSON.parse(localStorage.getItem('mixCart')||'{}');
+function addToCart(name,price,img){
+if(cart[name])cart[name].qty++;
+else cart[name]={name,price,qty:1,img};
+localStorage.setItem('mixCart',JSON.stringify(cart));
+updateUI();
+let btn=event.target;
+let old=btn.innerHTML;
+btn.innerHTML='✓ تم';
+btn.style.background='#00c853';
+setTimeout(()=>{btn.innerHTML=old;btn.style.background='';},1000);
+}
+function updateUI(){
+let count=0,total=0;
+Object.values(cart).forEach(i=>{count+=i.qty;total+=i.price*i.qty;});
+document.getElementById('cartCount').innerText=count;
+document.getElementById('footerCount').innerText=count;
+document.getElementById('footerPrice').innerText=total+' EGP';
+document.getElementById('totalItems').innerText=count;
+document.getElementById('subtotal').innerText=total+' EGP';
+document.getElementById('totalPrice').innerText=(total+(count>0?30:0))+' EGP';
+let body=document.getElementById('cartBody');
+let footer=document.getElementById('cartFooter');
+if(count===0){body.innerHTML='<div style="text-align:center;padding:40px;color:#999">🛒 سلتك فاضية<br><span style="font-size:12px">اضف اصناف من المنيو</span></div>';footer.style.display='none';}
+else{footer.style.display='block';let html='';Object.values(cart).forEach(item=>{html+=`<div class="cart-item"><img src="${item.img}"><div style="flex:1"><b style="font-size:13px">${item.name}</b><p style="font-size:11px;color:#777">${item.price} EGP × ${item.qty}</p></div><div style="display:flex;align-items:center;gap:8px"><div style="display:flex;gap:6px;align-items:center;background:#f5f5f5;border-radius:20px;padding:2px 6px"><button onclick="changeQty('${item.name}',-1)" style="width:24px;height:24px;border-radius:50%;border:none;background:#111;color:#fff;font-weight:900">−</button><span style="font-weight:900;font-size:13px;min-width:16px;text-align:center">${item.qty}</span><button onclick="changeQty('${item.name}',1)" style="width:24px;height:24px;border-radius:50%;border:none;background:#e10600;color:#fff;font-weight:900">+</button></div><div style="font-weight:900;color:#e10600;font-size:13px">${item.price*item.qty} EGP</div></div></div>`});body.innerHTML=html;}
+}
+function changeQty(name,d){if(cart[name]){cart[name].qty+=d;if(cart[name].qty<=0)delete cart[name];localStorage.setItem('mixCart',JSON.stringify(cart));updateUI();}}
+function openCart(){document.getElementById('cartModal').classList.add('open');updateUI();}
+function closeCart(){document.getElementById('cartModal').classList.remove('open');}
+function sendWhatsApp(){
+let count=Object.values(cart).reduce((s,i)=>s+i.qty,0);
+if(count===0){alert('سلتك فاضية');return;}
+let total=Object.values(cart).reduce((s,i)=>s+i.price*i.qty,0);
+let msg=`🔥 *طلب جديد - MIX CHICKEN* 🔥\n📞 HOTLINE 16786\n📱 01015861991\n━━━━━━━━━━━━━━\n\n*الطلب:*\n`;
+Object.values(cart).forEach((it,idx)=>{msg+=`${idx+1}. ${it.name} × ${it.qty} = ${it.price*it.qty} EGP\n`;});
+msg+=`\n━━━━━━━━━━━━━━\n📦 عدد الاصناف: ${count}\n🍗 سعر الأكل: ${total} EGP\n🛵 توصيل: 30 EGP\n*💰 الإجمالي: ${total+30} EGP*\n\n📍 العنوان: \n📞 رقمي: \n\nشكرا MIX CHICKEN ⚡`;
+window.open('https://wa.me/201015861991?text='+encodeURIComponent(msg),'_blank');
+}
+document.querySelectorAll('.cat').forEach(cat=>{
 cat.addEventListener('click',()=>{
-cats.forEach(c=>c.classList.remove('active'));
+document.querySelectorAll('.cat').forEach(c=>c.classList.remove('active'));
 cat.classList.add('active');
-const filter = cat.dataset.filter;
-cards.forEach(card=>{
-if(filter==='all'){card.classList.remove('hidden');}
+let f=cat.dataset.filter;
+document.querySelectorAll('.card,.label').forEach(card=>{
+if(f==='all')card.classList.remove('hidden');
 else{
-const catData = card.dataset.cat || '';
-if(catData.includes(filter)){card.classList.remove('hidden');}
-else{card.classList.add('hidden');}
+let cd=card.dataset.cat||'';
+if(cd.includes(f))card.classList.remove('hidden');
+else card.classList.add('hidden');
 }
 });
-document.getElementById('grid').scrollIntoView({behavior:'smooth',block:'start'});
 });
 });
-function order(item){
-window.open('https://wa.me/201015861991?text=عايز اطلب '+encodeURIComponent(item)+' من MIX CHICKEN - HOTLINE 16786','_blank');
-}
+updateUI();
 </script>
-
 </body>
 </html>
