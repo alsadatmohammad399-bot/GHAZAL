@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIX CHICKEN - خطوتين - سنجل ودبل</title>
+<title>MIX CHICKEN - التوصيل حسب المكان</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
@@ -66,19 +66,19 @@ body{background:#0a0a0a;color:#fff;padding-bottom:100px}
 <body>
 
 <div class="header">
-<div class="logo"><div class="logo-b">MIX</div>MIX CHICKEN - خطوتين</div>
+<div class="logo"><div class="logo-b">MIX</div>MIX CHICKEN - التوصيل حسب المكان</div>
 <div class="cart" onclick="openCart()">🛒<span id="cartCount">0</span></div>
 </div>
 
 <div class="cats">
-<div class="cat active" data-filter="all">الكل 53</div>
-<div class="cat" data-filter="sand">ساندويتش 11</div>
-<div class="cat" data-filter="wrap">راب 7</div>
-<div class="cat" data-filter="single">سنجل 8</div>
-<div class="cat" data-filter="family">عائلي 9</div>
-<div class="cat" data-filter="extreme">اكستريم 9</div>
-<div class="cat" data-filter="kids">أطفال 2</div>
-<div class="cat" data-filter="add">إضافات 7</div>
+<div class="cat active" data-filter="all">الكل</div>
+<div class="cat" data-filter="sand">ساندويتش</div>
+<div class="cat" data-filter="wrap">راب</div>
+<div class="cat" data-filter="single">سنجل</div>
+<div class="cat" data-filter="family">عائلي</div>
+<div class="cat" data-filter="extreme">اكستريم</div>
+<div class="cat" data-filter="kids">أطفال</div>
+<div class="cat" data-filter="add">إضافات</div>
 </div>
 
 <div class="grid" id="grid"></div>
@@ -100,42 +100,40 @@ body{background:#0a0a0a;color:#fff;padding-bottom:100px}
 <div class="sheet-head">
 <div>
 <h3 style="font-weight:900" id="stepTitle">🛒 سلتك - اللي طلبته</h3>
-<p style="font-size:10px;color:#ffffff66" id="stepDesc">كل صنف سطر لوحده - نفس المنتج يتجمع ×2</p>
+<p style="font-size:10px;color:#ffffff66" id="stepDesc">نفس المنتج يتجمع ×2 - منتج مختلف سطر جديد</p>
 </div>
 <button onclick="closeCart()" style="background:#ffffff12;width:40px;height:40px;border-radius:50%;border:none;color:#fff;font-size:20px">✕</button>
 </div>
 
-<!-- الخطوة 1: عرض اللي طلبته -->
 <div class="sheet-body step active" id="step1">
 <div id="cartBody"></div>
 <div style="background:#0a0a0a;padding:14px;border-radius:16px;margin-top:14px;border:2px solid #ffcc0033">
 <div style="display:flex;justify-content:space-between;font-size:12px;color:#ffffff99"><span>📦 إجمالي القطع:</span><span id="totalItems" style="color:#fff;font-weight:900">0</span></div>
 <div style="display:flex;justify-content:space-between;font-size:12px;color:#ffffff99;margin-top:6px"><span>🍗 أصناف مختلفة:</span><span id="totalTypes" style="color:#fff">0</span></div>
-<div style="display:flex;justify-content:space-between;font-size:12px;color:#ffffff99;margin-top:6px"><span>💰 سعر الأكل:</span><span id="subtotal" style="color:#fff">0 EGP</span></div>
-<div style="display:flex;justify-content:space-between;font-size:12px;color:#ffffff99;margin-top:6px"><span>🛵 توصيل:</span><span style="color:#fff">30 EGP</span></div>
-<div style="display:flex;justify-content:space-between;font-weight:900;font-size:19px;border-top:2px solid #ff1a1a;padding-top:10px;margin-top:10px;color:#fff"><span>💵 الإجمالي:</span><span id="totalPrice" style="color:#ffcc00">0 EGP</span></div>
+<div style="display:flex;justify-content:space-between;font-size:12px;color:#ffffff99;margin-top:6px"><span>🛵 التوصيل:</span><span style="color:#ffcc00;font-weight:800">يحدده الدليفري حسب المكان</span></div>
+<div style="display:flex;justify-content:space-between;font-weight:900;font-size:19px;border-top:2px solid #ff1a1a;padding-top:10px;margin-top:10px;color:#fff"><span>💵 سعر الأكل:</span><span id="totalPrice" style="color:#ffcc00">0 EGP</span></div>
+<div style="font-size:10px;color:#ffffff66;margin-top:6px;text-align:center">التوصيل يضاف حسب منطقتك - الدليفري يحدد السعر</div>
 </div>
 </div>
 
-<!-- الخطوة 2: بيانات التوصيل -->
 <div class="sheet-body step" id="step2">
 <div style="background:#0f0f0f;border:2px solid #ff1a1a44;border-radius:16px;padding:14px">
 <h4 style="font-size:14px;font-weight:900;margin-bottom:14px;color:#ff1a1a">📋 بيانات التوصيل - اكتبها عشان نبعتلك الأوردر</h4>
-<div style="margin:12px 0"><label style="font-size:13px;color:#fff;font-weight:800">👤 الاسم بالكامل *</label><input class="inp" id="custName" placeholder="مثال: محمد أحمد - مطلوب"></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div><label style="font-size:13px;color:#fff;font-weight:800">📱 موبايل 1 *</label><input class="inp" id="custPhone" placeholder="010xxxxxxxx - مطلوب" type="tel"></div><div><label style="font-size:12px;color:#ffffff99">📱 موبايل 2 (اختياري)</label><input class="inp" id="custPhone2" placeholder="011xxxxxxxx" type="tel"></div></div>
-<div style="margin:14px 0"><label style="font-size:13px;color:#fff;font-weight:800">📍 العنوان بالتفصيل *</label><textarea class="inp" id="custAddress" placeholder="مثال: المنوفية - شبين الكوم - شارع... - رقم العمارة - الدور - علامة مميزة - مطلوب" rows="4"></textarea></div>
-<div style="margin:12px 0"><label style="font-size:12px;color:#ffffff99">📝 ملاحظات للشيف (اختياري)</label><input class="inp" id="custNotes" placeholder="مثال: من غير شطة - زيادة مايونيز - رن الجرس..."></div>
-<div style="background:#0a0a0a;border:1px solid #ffffff14;border-radius:12px;padding:10px;margin-top:12px"><div style="font-size:11px;color:#ffffff88">🔒 بياناتك آمنة - هنبعتها واتساب مباشرة لـ MIX CHICKEN - 01015861991</div></div>
+<div style="margin:12px 0"><label style="font-size:13px;color:#fff;font-weight:800">👤 الاسم بالكامل *</label><input class="inp" id="custName" placeholder="مثال: محمد أحمد"></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div><label style="font-size:13px;color:#fff;font-weight:800">📱 موبايل 1 *</label><input class="inp" id="custPhone" placeholder="010xxxxxxxx" type="tel"></div><div><label style="font-size:12px;color:#ffffff99">📱 موبايل 2 (اختياري)</label><input class="inp" id="custPhone2" placeholder="011xxxxxxxx" type="tel"></div></div>
+<div style="margin:14px 0"><label style="font-size:13px;color:#fff;font-weight:800">📍 العنوان بالتفصيل *</label><textarea class="inp" id="custAddress" placeholder="مثال: شبين الكوم - شارع... - العمارة - الدور - علامة مميزة" rows="4"></textarea><div style="font-size:10px;color:#ffcc00;margin-top:6px">📍 العنوان مهم عشان نحدد سعر التوصيل حسب المسافة</div></div>
+<div style="margin:12px 0"><label style="font-size:12px;color:#ffffff99">📝 ملاحظات للشيف (اختياري)</label><input class="inp" id="custNotes" placeholder="مثال: من غير شطة - زيادة مايونيز..."></div>
 </div>
 <div style="background:#0a0a0a;padding:14px;border-radius:16px;margin-top:14px;border:2px solid #ffcc0033">
-<div style="display:flex;justify-content:space-between;font-weight:900;font-size:16px;color:#fff"><span>💵 هتدفع:</span><span id="finalPrice" style="color:#ffcc00">0 EGP</span></div>
+<div style="display:flex;justify-content:space-between;font-weight:900;font-size:16px;color:#fff"><span>💵 سعر الأكل:</span><span id="finalPrice" style="color:#ffcc00">0 EGP</span></div>
+<div style="display:flex;justify-content:space-between;font-size:12px;color:#ffcc00;margin-top:6px"><span>🛵 التوصيل:</span><span>يحدده الدليفري حسب عنوانك</span></div>
 <div style="font-size:10px;color:#ffffff66;margin-top:4px" id="finalSummary">0 قطعة - 0 صنف</div>
 </div>
 </div>
 
 <div class="sheet-foot" id="cartFooter">
 <div id="footerStep1"><button class="go2" id="btnConfirm" onclick="goToStep2()">✅ تأكيد الطلب - اللي طلبته فوق 👆</button><p style="font-size:10px;color:#ffffff66;text-align:center;margin-top:8px">هتدوس تأكيد - هنطلب منك الاسم والرقم والعنوان</p></div>
-<div id="footerStep2" style="display:none"><div style="display:flex;gap:8px"><button onclick="backToStep1()" style="background:#ffffff14;color:#fff;border:1px solid #ffffff14;padding:18px 20px;border-radius:16px;font-weight:900">← رجوع</button><button class="go" onclick="sendWhatsApp()">💬 إرسال واتساب - 01015861991</button></div><p style="font-size:10px;color:#ffffff66;text-align:center;margin-top:8px">بياناتك: الاسم + الرقم + العنوان هتتبعت واتساب</p></div>
+<div id="footerStep2" style="display:none"><div style="display:flex;gap:8px"><button onclick="backToStep1()" style="background:#ffffff14;color:#fff;border:1px solid #ffffff14;padding:18px 20px;border-radius:16px;font-weight:900">← رجوع</button><button class="go" onclick="sendWhatsApp()">💬 إرسال واتساب - 01015861991</button></div><p style="font-size:10px;color:#ffcc00;text-align:center;margin-top:8px">🛵 سعر التوصيل هيتحدد حسب عنوانك - الدليفري هيكلمك</p></div>
 </div>
 
 </div>
@@ -173,7 +171,7 @@ const products=[
 {id:23,cat:'single',name:'دينر بوكس 195',img:'chicken-pieces.jpg',desc:'3 قطع فراخ',options:[{label:'3 قطع',price:195}]},
 {id:24,cat:'single',name:'دينر ستربس 195',img:'chicken-pieces.jpg',desc:'5 استربس',options:[{label:'5 استربس',price:195}]},
 {id:25,cat:'single',name:'سوبر دينر 240',img:'chicken-pieces.jpg',desc:'4 قطع ذهبية',options:[{label:'4 قطع',price:240}]},
-{id:26,cat:'single',name:'جامبو بوكس 385',img:'family-480.jpg',desc:'6 قطع - من البوكس 480',options:[{label:'6 قطع',price:385}]},
+{id:26,cat:'single',name:'جامبو بوكس 385',img:'family-480.jpg',desc:'6 قطع',options:[{label:'6 قطع',price:385}]},
 {id:27,cat:'family',name:'فاميلي 7 قطع 415',img:'family-480.jpg',desc:'7 قطع',options:[{label:'7 قطع',price:415}]},
 {id:28,cat:'family',name:'فاميلي 8 قطع 480',img:'family-480.jpg',desc:'صورتك الحقيقية - 480',options:[{label:'8 قطع',price:480,best:true}]},
 {id:29,cat:'family',name:'سوبر بوكس 9 قطع 540',img:'family-480.jpg',desc:'9 قطع',options:[{label:'9 قطع',price:540}]},
@@ -182,7 +180,7 @@ const products=[
 {id:32,cat:'family',name:'فاميلي ميل 12 - 685',img:'family-480.jpg',desc:'12 قطعة',options:[{label:'12 قطعة',price:685}]},
 {id:33,cat:'family',name:'اقتصادية 10 - 785',img:'family-480.jpg',desc:'10 قطع',options:[{label:'10 قطع',price:785}]},
 {id:34,cat:'family',name:'سوبر فاميلي 18 - 890',img:'family-480.jpg',desc:'18 قطعة',options:[{label:'18 قطعة',price:890}]},
-{id:35,cat:'family',name:'بارتي ميل 21 - 999',img:'family-480.jpg',desc:'21 قطعة - 4 كول سلو - 4 بطاطس',options:[{label:'21 قطعة',price:999,best:true}]},
+{id:35,cat:'family',name:'بارتي ميل 21 - 999',img:'family-480.jpg',desc:'21 قطعة',options:[{label:'21 قطعة',price:999,best:true}]},
 {id:36,cat:'extreme',name:'رايز ستربس 130',img:'egyptians.jpg',desc:'استربس - رز',options:[{label:'بوكس',price:130}]},
 {id:37,cat:'extreme',name:'سوبر تشيكن 165',img:'egyptians.jpg',desc:'Egyptians Meal',options:[{label:'بوكس',price:165}]},
 {id:38,cat:'extreme',name:'رايز ستربس 205',img:'egyptians.jpg',desc:'4 استربس - 400جرام رز',options:[{label:'كبير',price:205,best:true}]},
@@ -249,9 +247,9 @@ function updateUI(){
   document.getElementById('totalItems').innerText=totalQty+' قطعة';
   document.getElementById('totalTypes').innerText=cart.length+' نوع';
   document.getElementById('subtotal').innerText=totalPrice+' EGP';
-  document.getElementById('totalPrice').innerText=(totalPrice+(totalQty>0?30:0))+' EGP';
-  document.getElementById('finalPrice').innerText=(totalPrice+30)+' EGP';
-  document.getElementById('finalSummary').innerText=`${totalQty} قطعة - ${cart.length} نوع مختلف`;
+  document.getElementById('totalPrice').innerText=totalPrice+' EGP';
+  document.getElementById('finalPrice').innerText=totalPrice+' EGP';
+  document.getElementById('finalSummary').innerText=`${totalQty} قطعة - ${cart.length} نوع - التوصيل حسب المكان`;
   let body=document.getElementById('cartBody');
   if(cart.length===0){
     body.innerHTML='<div style="text-align:center;padding:30px;color:#ffffff55">🛒 سلتك فاضية<br>نفس المنتج يتجمع ×2 - منتج مختلف سطر جديد تحته</div>';
@@ -267,11 +265,7 @@ function updateUI(){
 }
 function changeQty(idx,d){if(cart[idx]){cart[idx].qty+=d;if(cart[idx].qty<=0)cart.splice(idx,1);localStorage.setItem('mixCartStep',JSON.stringify(cart));updateUI();}}
 function removeItem(idx){cart.splice(idx,1);localStorage.setItem('mixCartStep',JSON.stringify(cart));updateUI();}
-function openCart(){
-  document.getElementById('cartModal').classList.add('open');
-  backToStep1();
-  updateUI();
-}
+function openCart(){document.getElementById('cartModal').classList.add('open');backToStep1();updateUI();}
 function closeCart(){document.getElementById('cartModal').classList.remove('open');}
 function goToStep2(){
   if(cart.length===0){alert('سلتك فاضية');return;}
@@ -280,7 +274,7 @@ function goToStep2(){
   document.getElementById('footerStep1').style.display='none';
   document.getElementById('footerStep2').style.display='block';
   document.getElementById('stepTitle').innerText='📋 بيانات التوصيل';
-  document.getElementById('stepDesc').innerText='اكتب اسمك ورقمك وعنوانك';
+  document.getElementById('stepDesc').innerText='اكتب اسمك ورقمك وعنوانك - التوصيل حسب المكان';
 }
 function backToStep1(){
   document.getElementById('step2').classList.remove('active');
@@ -288,7 +282,7 @@ function backToStep1(){
   document.getElementById('footerStep2').style.display='none';
   document.getElementById('footerStep1').style.display='block';
   document.getElementById('stepTitle').innerText='🛒 سلتك - اللي طلبته';
-  document.getElementById('stepDesc').innerText='كل صنف سطر لوحده - نفس المنتج يتجمع ×2';
+  document.getElementById('stepDesc').innerText='كل صنف سطر لوحده';
 }
 function sendWhatsApp(){
   let name=document.getElementById('custName').value.trim();
@@ -301,12 +295,12 @@ function sendWhatsApp(){
   if(!name){document.getElementById('custName').classList.add('err');err=true;}
   if(!phone||phone.length<11){document.getElementById('custPhone').classList.add('err');err=true;}
   if(!address||address.length<10){document.getElementById('custAddress').classList.add('err');err=true;}
-  if(err){alert('⚠️ اكمل البيانات:\n👤 الاسم\n📱 الموبايل 11 رقم\n📍 العنوان 10 حروف على الأقل');return;}
+  if(err){alert('⚠️ اكمل البيانات:\n👤 الاسم\n📱 الموبايل 11 رقم\n📍 العنوان');return;}
   let totalQty=cart.reduce((s,i)=>s+i.qty,0);
   let totalPrice=cart.reduce((s,i)=>s+i.price*i.qty,0);
-  let msg=`🔥 *طلب جديد - MIX CHICKEN* 🔥\n📞 16786\n━━━━━━━━━━━━━━\n\n👤 الاسم: ${name}\n📱 موبايل 1: ${phone}\n${phone2?`📱 موبايل 2: ${phone2}\n`:''}📍 العنوان: ${address}\n${notes?`📝 ملاحظات: ${notes}\n`:''}\n━━━━━━━━━━━━━━\n🍗 *الطلب - اللي طلبته (${cart.length} أنواع - ${totalQty} قطعة):*\n`;
+  let msg=`🔥 *طلب جديد - MIX CHICKEN* 🔥\n📞 16786\n━━━━━━━━━━━━━━\n\n👤 الاسم: ${name}\n📱 موبايل 1: ${phone}\n${phone2?`📱 موبايل 2: ${phone2}\n`:''}📍 العنوان: ${address}\n${notes?`📝 ملاحظات: ${notes}\n`:''}\n━━━━━━━━━━━━━━\n🍗 *الطلب (${cart.length} أنواع - ${totalQty} قطعة):*\n`;
   cart.forEach((it,i)=>{msg+=`${i+1}. ${it.baseName} - ${it.option} × ${it.qty} = ${it.price*it.qty} EGP\n`;});
-  msg+=`\n━━━━━━━━━━━━━━\n📦 أنواع: ${cart.length}\n🔢 قطع: ${totalQty}\n💰 أكل: ${totalPrice} EGP\n🛵 توصيل: 30 EGP\n💵 *إجمالي: ${totalPrice+30} EGP*\n\n⏰ ${new Date().toLocaleString('ar-EG')}`;
+  msg+=`\n━━━━━━━━━━━━━━\n📦 أنواع: ${cart.length}\n🔢 قطع: ${totalQty}\n💰 *سعر الأكل: ${totalPrice} EGP*\n🛵 التوصيل: *يحدده الدليفري حسب المكان والمسافة*\n📍 العنوان: ${address}\n\n⏰ ${new Date().toLocaleString('ar-EG')}\n\nملاحظة: سعر التوصيل غير شامل - يحدد حسب منطقتك`;
   window.open('https://wa.me/201015861991?text='+encodeURIComponent(msg),'_blank');
 }
 document.querySelectorAll('.cat').forEach(cat=>{
