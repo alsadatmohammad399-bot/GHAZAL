@@ -3,43 +3,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIX CHICKEN - HOTLINE 16786 - 01015861991</title>
+<title>MIX CHICKEN - HOTLINE 16786 - 01015861991 - CRISPY CHICKEN ELECTRIC</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:Arial;background:#fff}
-.top{background:#d40000;color:#fff;padding:12px;text-align:center;font-weight:900;font-size:16px}
-.nav{background:#fff;padding:12px 4%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px #0001;position:sticky;top:0}
-.logo{font-weight:900;font-size:20px}
-.logo span{color:#d40000}
-.menu img{width:100%;display:block}
-.order{position:fixed;bottom:15px;left:4%;right:4%;background:#d40000;color:#fff;padding:16px;border-radius:14px;text-align:center;font-weight:900;text-decoration:none;font-size:18px;box-shadow:0 8px 20px #d4000044}
-.whats{position:fixed;bottom:85px;right:15px;background:#00c853;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;box-shadow:0 5px 15px #00c85388}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Tajawal',sans-serif}
+body{background:#f5f5f5;color:#111}
+.top-red{background:#d40000;color:#fff;padding:12px;text-align:center;font-weight:900;font-size:15px;position:sticky;top:0;z-index:1000;letter-spacing:0.5px}
+.nav{background:#fff;padding:14px 4%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 12px #0001;position:sticky;top:42px;z-index:999}
+.logo{font-weight:900;font-size:22px;display:flex;align-items:center;gap:10px}
+.star-logo{width:50px;height:50px;background:#FFD500;display:flex;align-items:center;justify-content:center;font-weight:900;color:#d40000;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);font-size:11px;line-height:9px;text-align:center}
+.hotline{color:#d40000;font-weight:900;font-size:18px}
+.hotline b{font-size:26px}
+.tabs{background:#0f0f0f;padding:12px 4%;display:flex;gap:8px;overflow-x:auto;position:sticky;top:96px;z-index:998;scrollbar-width:none}
+.tab{background:#222;color:#aaa;padding:10px 16px;border-radius:25px;font-size:12px;font-weight:700;white-space:nowrap;cursor:pointer;border:1px solid #333}
+.tab.active{background:#d40000;color:#fff;border-color:#d40000}
+.section{margin:15px 3%;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 20px #0001;border:1px solid #eee}
+.sec-head{background:linear-gradient(90deg,#d40000,#b00000);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+.sec-head h2{font-size:18px;font-weight:900;letter-spacing:0.5px}
+.sec-head span{background:#FFD500;color:#000;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:900}
+.items{padding:0}
+.itm{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid #f2f2f2;transition:0.2s}
+.itm:hover{background:#fff8f8}
+.itm:last-child{border:none}
+.info{flex:1}
+.info b{font-size:15px;font-weight:900;display:block}
+.info p{font-size:12px;color:#666;margin-top:4px;line-height:1.5}
+.price-box{text-align:left;min-width:110px}
+.price{color:#d40000;font-weight:900;font-size:15px}
+.btn-order{background:#d40000;color:#fff;border:none;padding:7px 14px;border-radius:20px;font-weight:900;font-size:12px;cursor:pointer;text-decoration:none;display:inline-block;margin-top:6px;transition:0.2s}
+.btn-order:hover{background:#a00000}
+.combo-box{background:linear-gradient(135deg,#fff8f0,#ffe4cc);border:2px dashed #d40000;margin:12px;border-radius:12px;padding:14px;display:flex;justify-content:space-between;align-items:center}
+.add-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;font-size:13px}
+.add-item{display:flex;justify-content:space-between;padding:10px 20px;border-bottom:1px solid #f5f5f5}
+.footer{background:#0a0000;color:#fff;padding:35px 5% 120px;text-align:center}
+.branch{background:#1a0000;padding:12px;border-radius:10px;margin:6px 0;border-right:3px solid #d40000;text-align:right;font-size:13px;line-height:1.6}
+.float-order{position:fixed;bottom:15px;left:4%;right:4%;background:linear-gradient(90deg,#d40000,#ff0000);color:#fff;padding:16px;border-radius:14px;text-align:center;font-weight:900;font-size:17px;text-decoration:none;z-index:2000;box-shadow:0 8px 25px #d4000066;display:flex;justify-content:center;gap:10px;align-items:center}
+.float-whats{position:fixed;bottom:85px;right:15px;background:#00c853;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;z-index:1999;box-shadow:0 6px 20px #00c85366}
+@media(min-width:768px){.section{margin:15px 8%}.tabs{padding:12px 8%}.top-red{font-size:16px}.add-grid{grid-template-columns:1fr 1fr 1fr}}
 </style>
 </head>
 <body>
-<div class="top">🔥 HOTLINE 16786 • واتساب 01015861991 • اطلب الآن 🔥</div>
+
+<div class="top-red">🔥 HOT LINE 16786 • PHONE 01015861991 • MIX CHICKEN - CRISPY CHICKEN ELECTRIC ⚡ 🔥</div>
+
 <div class="nav">
-<div class="logo">⭐ MIX <span>CHICKEN</span></div>
-<div style="font-weight:900;color:#d40000">HOTLINE 16786</div>
+<div class="logo"><div class="star-logo">MIX<br>CHICKEN</div>MIX ★ CHICKEN</div>
+<div class="hotline">HOTLINE <b>16786</b></div>
 </div>
 
-<div class="menu">
-<!-- المنيو الأول - الساندويتشات -->
-<img src="https://i.imgur.com/8Km9tLL.jpg" alt="menu" onerror="this.src='https://via.placeholder.com/800x1200?text=MIX+CHICKEN+MENU+1'">
-<!-- المنيو الثاني - الوجبات العائلية -->
-<img src="https://i.imgur.com/5Q6s4rA.jpg" alt="menu" onerror="this.src='https://via.placeholder.com/800x1200?text=MIX+CHICKEN+MENU+2'">
+<div class="tabs">
+<div class="tab active">الكل</div>
+<div class="tab">🍔 SANDWICHES</div>
+<div class="tab">🥪 FILLER'S</div>
+<div class="tab">🌯 WRAPS</div>
+<div class="tab">🍟 COMPO 60</div>
+<div class="tab">➕ ADD ON</div>
+<div class="tab">👶 KIDS 100</div>
+<div class="tab">🔥 EXTREME</div>
+<div class="tab">🍗 SINGLE</div>
+<div class="tab">👨‍👩‍👧‍👦 FAMILY</div>
 </div>
 
-<div style="background:#111;color:#fff;padding:30px 4%;text-align:center;padding-bottom:120px">
-<h3 style="color:#FFD500">📍 فروعنا</h3>
-<p style="line-height:2;font-size:13px;margin-top:10px">
-العاشر من رمضان خلف مكتبه الاسكندريه<br>
-المنصوره - الغربيه سمنود<br>
-الاسماعيليه 1 و 2<br>
-</p>
-<p style="margin-top:15px;font-weight:900">01015861991 - 16786</p>
+<!-- SANDWICHES FRESH CHICKEN -->
+<div class="section">
+<div class="sec-head"><h2>★ SANDWICHES FRESH CHICKEN</h2><span>HOTLINE 16786</span></div>
+<div class="items">
+<div class="itm"><div class="info"><b>سوبر تيستي - Super Tasty</b><p>قطع صدور كرسبي - خس - صوص ميكس - شريحة بيف بيكون - شريحة جبنه سويسرى - صوص شيدر - صوص بيج تيستى</p></div><div class="price-box"><div class="price">SINGLE 135 / DOUBLE 195 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+سوبر+تيستي+135">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>سوبر ميكس - Super Mix</b><p>قطع صدور كرسبي - خس - صوص ميكس - 2 قطعات بصل - 2 صوابع موتزاريلا - شرائح جبنه امريكى - مايونيز - تركى مدخن</p></div><div class="price-box"><div class="price">SINGLE 140 / DOUBLE 205 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+سوبر+ميكس">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>تشيكن رانش - Chicken Ranch</b><p>قطع صدور كرسبي - مايونيز - خس - بيف بيكون - شريحة جبنه امريكى - صوص شيدر - صوص رانش</p></div><div class="price-box"><div class="price">SINGLE 135 / DOUBLE 195 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+تشيكن+رانش">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>فاير زنجر - Fire Zinger</b><p>قطع صدور كرسبي - خس - مايونيز - خيار مخلل - في العادي - هالبينو في الحار - شريحة جبنة امريكى - صوص ميكس</p></div><div class="price-box"><div class="price">SINGLE 130 / DOUBLE 195 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+فاير+زنجر">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>سويت شيلي - Sweet Chili</b><p>قطعة زنجر مقرمشة - صوص سويت تشيلي - صوص شيدر - خس - جبنه سويسرى - تركى مدخن - مايونيز حار</p></div><div class="price-box"><div class="price">SINGLE 135 / DOUBLE 195 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+سويت+شيلي">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>مايتي زنجر - Mighty Zinger</b><p>2 قطعة زنجر مقرمشة - خس - مايونيز - شريحة جبنه امريكى - تركى مدخن - صوص شيدر - صوص حار</p></div><div class="price-box"><div class="price">SANDWICH 175 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+مايتي+زنجر">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>زنجر راوند - Zinger Round</b><p>قطعة زنجر مقرمشة - خس - مايونيز - صوص شيدر</p></div><div class="price-box"><div class="price">SANDWICH 120 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+زنجر+راوند">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>ميكس تشيز - Mix Cheese</b><p>قطع صدور كرسبي - خس - صوص ميكس - جبنه موتزاريلا - تركى مدخن - شرائح جبنه امريكى</p></div><div class="price-box"><div class="price">SINGLE 140 / DOUBLE 205 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+ميكس+تشيز">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>فرايد تشيكن - Fried Chicken</b><p>قطع صدور كرسبي - خس - مايونيز - تركى مدخن - بيج صوص - شريحة جبنه امريكى - صوص شيدر - صوص ميكس</p></div><div class="price-box"><div class="price">SINGLE 135 / DOUBLE 195 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+فرايد+تشيكن">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>جولدن ميكس - Golden Mix</b><p>قطع صدور كرسبي - خس - مايونيز - شريحة جبنه - تركى مدخن - صوص شيدر - صوص الجولدن - صوص ميكس الخطير</p></div><div class="price-box"><div class="price">SINGLE 135 / DOUBLE 205 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+جولدن+ميكس">اطلب</a></div></div>
+</div>
 </div>
 
-<a class="whats" href="https://wa.me/201015861991">💬</a>
-<a class="order" href="https://wa.me/201015861991?text=عايز%20اطلب%20من%20MIX%20CHICKEN">🛒 اطلب واتساب - 01015861991</a>
+<!-- FILLER'S -->
+<div class="section">
+<div class="sec-head"><h2>★ FILLER'S SANDWICHES FRESH CHICKEN</h2><span>195 EGP</span></div>
+<div class="items">
+<div class="itm"><div class="info"><b>كلاسيك فيلر - Classic Filler</b><p>قطع صدور كرسبي - خس - مايونيز - بيج تيستى - بيف بيكون - شريحة جبنه سويسرى - صوص شيدر</p></div><div class="price-box"><div class="price">195 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+كلاسيك+فيلر">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>بيج فيلر هاليبينو - Big Filler Halabino</b><p>قطع صدور كرسبي - خس - قطع هاليبينو - مايونيز - تركى مدخن - شريحة جبنه امريكى - صوص ميكس</p></div><div class="price-box"><div class="price">195 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+بيج+فيلر+هاليبينو">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>زنجر فيلر - Zinger Filler</b><p>قطع صدور كرسبي - خس - مايونيز - تركى مدخن - صوص شيدر - شرائح الجبنه الامريكى - صوص ميكس</p></div><div class="price-box"><div class="price">SINGLE 115 / DOUBLE 195 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+زنجر+فيلر">اطلب</a></div></div>
+</div>
+<div class="combo-box"><div><b style="font-size:20px;color:#d40000">★★★ COMPO FRIES + COLA 60 EGP</b><p style="font-size:12px">MAKE IT COMBO ONLY 45 L.E</p></div><div style="font-size:32px;font-weight:900;color:#d40000">60 EGP</div></div>
+</div>
+
+<!-- WRAPS -->
+<div class="section">
+<div class="sec-head"><h2>★ WRAP SANDWICHES FRESH CHICKEN</h2><span>60-195 EGP</span></div>
+<div class="items">
+<div class="itm"><div class="info"><b>تويستر بطاطس كبير - كبير</b><p>قطع دجاج كرسبي - بطاطس - صوص</p></div><div class="price-box"><div class="price">65 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+تويستر+كبير">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>تويستر بطاطس وسط - وسط</b><p>قطع دجاج كرسبي - بطاطس</p></div><div class="price-box"><div class="price">60 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+تويستر+وسط">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>موتزاريلا تويستر - Mozzarella Twister</b><p>قطع استربس - خس - مايونيز - موتزاريلا سايحه - صوص شيدر امريكى</p></div><div class="price-box"><div class="price">SINGLE 115 / DOUBLE 170 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+موتزاريلا+تويستر">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>تويستر - Twister</b><p>قطع صدور كرسبي - خس - مايونيز - شرائح جبنه سويسرى - بيك بيكون او تركى - بيج بيستى</p></div><div class="price-box"><div class="price">100 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+تويستر">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>بيج راب - Big Rab</b><p>قطع صدور كرسبي - خس - مايونيز - شرائح جبنه سويسرى</p></div><div class="price-box"><div class="price">195 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+بيج+راب">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>دبل تشيكن راب - Double Chicken Rab</b><p>2 قطعة ستربس - فرايز - خبز - عصير</p></div><div class="price-box"><div class="price">195 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+دبل+تشيكن+راب">اطلب</a></div></div>
+</div>
+</div>
+
+<!-- ADD TO YOUR MEAL -->
+<div class="section">
+<div class="sec-head"><h2>★ ADD TO YOUR MEAL FRESH CHICKEN</h2><span>15-80 EGP</span></div>
+<div class="add-grid">
+<div class="add-item"><span>بيف بيكون</span><b>15 EGP</b></div>
+<div class="add-item"><span>تركى مدخن</span><b>15 EGP</b></div>
+<div class="add-item"><span>جبن شيدر</span><b>15 EGP</b></div>
+<div class="add-item"><span>هاليبينو</span><b>15 EGP</b></div>
+<div class="add-item"><span>خبز</span><b>5 EGP</b></div>
+<div class="add-item"><span>فرايز</span><b>35-55 EGP</b></div>
+<div class="add-item"><span>أرز صغير</span><b>20-50 EGP</b></div>
+<div class="add-item"><span>حلقات بصل</span><b>30-50 EGP</b></div>
+<div class="add-item"><span>موتزاريلا استيكس</span><b>70 EGP</b></div>
+<div class="add-item"><span>جار جبنه</span><b>80 EGP</b></div>
+<div class="add-item"><span>CHICKEN PIECE قطعة دجاج حار</span><b>85 EGP</b></div>
+<div class="add-item"><span>قطعة دجاج بارد</span><b>70 EGP</b></div>
+<div class="add-item"><span>قطعة ستربس</span><b>40 EGP</b></div>
+<div class="add-item"><span>تبديل فخد بصدور</span><b>25 EGP</b></div>
+<div class="add-item"><span>تبديل دبوس بفخد</span><b>25 EGP</b></div>
+<div class="add-item"><span>تبديل دبوس بصدر</span><b>40 EGP</b></div>
+</div>
+</div>
+
+<!-- KIDS & EXTREME -->
+<div class="section">
+<div class="sec-head"><h2>★ KIDS' MEALS FRESH CHICKEN + EXTREME MEALS</h2><span>HOTLINE 16786</span></div>
+<div class="items">
+<div class="itm"><div class="info"><b>ستربس كيدز - Strips Kids</b><p>2 قطعة ستربس - فرايز - خبز - عصير 100 EGP</p></div><div class="price-box"><div class="price">100 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+ستربس+كيدز">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>تشيكن كيدز - Chicken Kids</b><p>قطعة دجاج - فرايز - خبز - عصير</p></div><div class="price-box"><div class="price">100 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+تشيكن+كيدز">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>رايز ستربس - Rise Strips</b><p>4 ستربس - 400 جرام رز - بطاطس - صوص</p></div><div class="price-box"><div class="price">205 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+رايز+ستربس">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>رايز ميل - Rise Meal</b><p>2 قطعة فرايد تشيكن - 400 جرام رز - بطاطس - صوص</p></div><div class="price-box"><div class="price">205 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+رايز+ميل">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>سوبر تشيكن - Super Chicken</b><p>2 قطعة فرايد تشيكن - 2 ستربس - ارز مبهر - بطاطس</p></div><div class="price-box"><div class="price">215 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+سوبر+تشيكن">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>اكستريم ماكس - Extreme Max</b><p>1 قطعة فرايد تشيكن - ساندوتش زنجر راوند - بطاطس - رز مبهر</p></div><div class="price-box"><div class="price">215 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+اكستريم+ماكس">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>بطاطس شيدر - بطاطس</b><p>بطاطس شيدر</p></div><div class="price-box"><div class="price">70 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+بطاطس+شيدر">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>تشيزي تشيكن فرايز - Cheezy Chicken Fries</b></div><div class="price-box"><div class="price">95 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+تشيزي+فرايز">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>ريزو - Rizo</b></div><div class="price-box"><div class="price">95 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+ريزو">اطلب</a></div></div>
+</div>
+</div>
+
+<!-- SINGLE MEALS -->
+<div class="section">
+<div class="sec-head"><h2>★ SINGLE MEALS FRESH CHICKEN</h2><span>130-385 EGP</span></div>
+<div class="items">
+<div class="itm"><div class="info"><b>سناك بوكس - Snacks Box</b><p>2 قطع - بطاطس - كول سلو - خبز - كاتشب</p></div><div class="price-box"><div class="price">130 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+سناك+بوكس">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>لايت بوكس - Lite Box</b><p>3 ستربس - خبز - بطاطس - كاتشب</p></div><div class="price-box"><div class="price">130 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+لايت+بوكس">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>وجبة المصريين - Egyptian Meal</b><p>2 قطعة دجاج - ريزو - بطاطس - خبز - كاتشب</p></div><div class="price-box"><div class="price">165 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+وجبة+المصريين">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>سمارت بوكس - Smart Box</b><p>قطعة دجاج - 2 قطعة استربس - بطاطس - خبز</p></div><div class="price-box"><div class="price">165 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+سمارت+بوكس">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>دينر بوكس - Dinner Box</b><p>3 قطع - بطاطس - كلو سلو - خبز - كاتشب</p></div><div class="price-box"><div class="price">195 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+دينر+بوكس">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>دينر ستربس - Dinner Strips</b><p>5 ستربس - 2 خبز - بطاطس - كلو سلو - كاتشب</p></div><div class="price-box"><div class="price">195 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+دينر+ستربس">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>سوبر دينر - Super Dinner</b><p>4 قطع - بطاطس - كلو سلو - خبز - كاتشب</p></div><div class="price-box"><div class="price">240 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+سوبر+دينر">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>جامبو بوكس - Jumbo Box</b><p>6 قطع - بطاطس فاميلي - 2 كلو سلو - خبز - كاتشب</p></div><div class="price-box"><div class="price">385 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+جامبو+بوكس">اطلب</a></div></div>
+</div>
+</div>
+
+<!-- FAMILY MEALS -->
+<div class="section">
+<div class="sec-head"><h2>★ FAMILY MEALS FRESH CHICKEN</h2><span>415-999 EGP</span></div>
+<div class="items">
+<div class="itm"><div class="info"><b>فاميلي 7 قطع - Family 7pcs</b><p>7 قطع - بطاطس - كلو سلو وسط - 3 خبز - كاتشب</p></div><div class="price-box"><div class="price">415 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+فاميلي+7">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>فاميلي 8 قطع - Family 8pcs</b><p>8 قطع - بطاطس وسط - 2 كلو سلو وسط - 4 خبز</p></div><div class="price-box"><div class="price">480 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+فاميلي+8">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>سوبر بوكس - Super Box</b><p>9 قطع - كلو سلو (L) - بطاطس (L) - 5 خبز</p></div><div class="price-box"><div class="price">540 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+سوبر+بوكس">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>تشيكن ميكس - Chicken Mix</b><p>6 قطع دجاج - 1 ستربس - بطاطس كبير - خبز - مشروب</p></div><div class="price-box"><div class="price">595 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+تشيكن+ميكس">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>فاميلي ستربس - Family Strips</b><p>10 قطع ستربس - كلو سلو (L) - بطاطس كبير - 1 لتر كولا - خبز - كاتشب</p></div><div class="price-box"><div class="price">615 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+فاميلي+ستربس">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>فاميلي ميل - Family Meal</b><p>12 قطعة - كلو سلو (L) - بطاطس (L) - خبز - مشروب</p></div><div class="price-box"><div class="price">685 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+فاميلي+ميل">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>وجبة اقتصادية - Economic Meal</b><p>10 قطع - كلو سلو (L) - بطاطس (L) - خبز - مشروب</p></div><div class="price-box"><div class="price">785 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+وجبة+اقتصادية">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>سوبر فاميلي - Super Family</b><p>18 قطعة - كلو سلو (L) - بطاطس (L) - خبز - مشروب</p></div><div class="price-box"><div class="price">890 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+سوبر+فاميلي">اطلب</a></div></div>
+<div class="itm"><div class="info"><b>بارتي ميل - Party Meal</b><p>21 قطعة - كلو سلو (L) - بطاطس (L) - خبز - مشروب</p></div><div class="price-box"><div class="price">999 EGP</div><a class="btn-order" href="https://wa.me/201015861991?text=عايز+بارتي+ميل">اطلب</a></div></div>
+</div>
+</div>
+
+<div class="footer">
+<h3 style="color:#FFD500;margin-bottom:15px">📍 فروع MIX CHICKEN - HOTLINE 16786</h3>
+<div style="display:grid;gap:8px;text-align:right;max-width:700px;margin:0 auto">
+<div class="branch">📍 العاشر من رمضان خلف مكتبة الاسكندرية</div>
+<div class="branch">📍 المنصورة</div>
+<div class="branch">📍 الغربية : سمنود - ميدان النحاس مول زايد</div>
+<div class="branch">📍 فرع الاسماعيلية 1 : الشيخ زايد - مدينة الطلبة بجوار شيل اوت الدائري</div>
+<div class="branch">📍 الاسماعيلية 2 : بجوار الجامعة القديمة - شارع نمرة 2</div>
+</div>
+<div style="margin-top:25px">
+<p style="font-weight:900;font-size:20px">HOTLINE 16786 • 01015861991</p>
+<p style="margin-top:8px;color:#FFD500">CRISPY CHICKEN, ELECTRIC ⚡</p>
+<p style="font-size:12px;margin-top:10px;opacity:0.7">Fresh • Hot - Delicious • Follow us @mixchicken</p>
+</div>
+</div>
+
+<a class="float-whats" href="https://wa.me/201015861991?text=عايز%20اطلب%20من%20MIX%20CHICKEN">💬</a>
+<a class="float-order" href="https://wa.me/201015861991?text=عايز%20اطلب%20اوردر%20من%20MIX%20CHICKEN%20-%20HOTLINE%2016786">🛒 اطلب الآن واتساب - 01015861991 | HOTLINE 16786</a>
+
 </body>
 </html>
