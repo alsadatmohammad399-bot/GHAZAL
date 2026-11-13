@@ -2,333 +2,116 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIX CHICKEN PREMIUM - 53 صنف</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800;900&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MIX CHICKEN - 53 ITEMS</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
-body{background:#fdf6ef;color:#2b1a0e;padding-bottom:110px}
-.top-bar{background:#7a1a1a;color:#ffe8c8;padding:8px 4%;display:flex;justify-content:space-between;font-size:11px;font-weight:800}
-.header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 20px #0000000f;padding:10px 4%;display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid #7a1a1a}
-.logo{display:flex;align-items:center;gap:12px;font-weight:900;font-size:20px;color:#7a1a1a}
-.logo-icon{width:52px;height:52px;background:linear-gradient(135deg,#7a1a1a,#b91c1c);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#ffe8c8;font-weight:900;font-size:18px;border:2px solid #ffe8c8}
-.cart{position:relative;background:#7a1a1a;color:#ffe8c8;width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;border:2px solid #ffe8c8}
-.cart span{position:absolute;top:-8px;right:-8px;background:#ff1a1a;color:#fff;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;border:2px solid #fff}
-.hero{margin:12px 4%;background:linear-gradient(135deg,#2b0a0a 0%,#7a1a1a 100%);border-radius:20px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;color:#ffe8c8;border:2px solid #ffe8c8}
-.hero h2{font-size:17px;font-weight:900;line-height:1.3;color:#ffe8c8}
-.hero p{font-size:11px;opacity:0.8;margin-top:4px;color:#ffe8c8}
-.hero-badge{background:#ffe8c8;color:#7a1a1a;padding:8px 14px;border-radius:100px;font-size:11px;font-weight:900}
-.cats{position:sticky;top:78px;z-index:99;background:#fdf6ef;padding:12px 4%;display:flex;gap:8px;overflow-x:auto}
-.cat{padding:12px 20px;border-radius:12px;background:#fff;border:2px solid #7a1a1a14;font-weight:800;font-size:13px;white-space:nowrap;cursor:pointer;color:#7a1a1a88}
-.cat.active{background:#7a1a1a;color:#ffe8c8;border-color:#7a1a1a}
-.grid{padding:16px 4%;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-@media(min-width:700px){.grid{grid-template-columns:repeat(4,1fr)}}
-.card{background:#fff;border-radius:16px;overflow:hidden;border:2px solid #7a1a1a0f;cursor:pointer;transition:0.25s}
-.card:hover{transform:translateY(-3px);border-color:#7a1a1a33}
-.card-img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#fdf6ef}
-.card-body{padding:12px 14px 14px}
-.card-body b{font-size:13px;font-weight:800;display:block;min-height:34px;color:#2b1a0e}
-.card-body small{font-size:11px;color:#7a1a1a66;display:block;margin-top:4px;min-height:24px}
-.row{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
-.price em{color:#7a1a1a;font-style:normal;font-size:15px;font-weight:900}
-.add{width:36px;height:36px;border-radius:10px;background:#7a1a1a;color:#ffe8c8;border:none;font-weight:900;cursor:pointer;font-size:16px}
-.label{grid-column:1/-1;background:linear-gradient(135deg,#7a1a1a,#9a2222);border:2px solid #ffe8c8;padding:14px 18px;border-radius:14px;display:flex;justify-content:space-between;align-items:center;margin-top:16px;color:#ffe8c8}
-.label h3{font-size:14px;font-weight:900;color:#ffe8c8}
-.label span{font-size:10px;background:#ffe8c8;color:#7a1a1a;padding:6px 12px;border-radius:100px;font-weight:900}
-.hidden{display:none!important}
-.modal{position:fixed;inset:0;background:#2b0a0a88;backdrop-filter:blur(20px);z-index:9999;display:none;align-items:end;justify-content:center}
-.modal.open{display:flex}
-.sheet{background:#fdf6ef;width:100%;max-width:520px;max-height:94vh;border-radius:24px 24px 0 0;overflow:hidden;display:flex;flex-direction:column;border:3px solid #7a1a1a}
-.sheet-head{padding:18px 20px;display:flex;justify-content:space-between;border-bottom:2px solid #7a1a1a14;background:#fff;flex-shrink:0}
-.sheet-body{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;background:#fdf6ef;min-height:200px}
-.sheet-foot{padding:16px 20px;background:#fff;border-top:2px solid #7a1a1a14;flex-shrink:0}
-.inp{width:100%;padding:14px 16px;border-radius:12px;border:2px solid #7a1a1a14;background:#fff;color:#2b1a0e;margin-top:6px;font-size:13px;font-weight:700}
-.inp.err{border-color:#ff1a1a;background:#fff0f0}
-.go{background:#7a1a1a;color:#ffe8c8;border:2px solid #ffe8c8;width:100%;padding:18px;border-radius:14px;font-weight:900;font-size:15px;cursor:pointer}
-.go2{background:#2b1a0e;color:#ffe8c8;border:2px solid #ffe8c8;width:100%;padding:18px;border-radius:14px;font-weight:900;font-size:15px;cursor:pointer}
-.bar{position:fixed;bottom:14px;left:4%;right:4%;background:#2b1a0e;color:#ffe8c8;padding:14px 18px;border-radius:16px;display:flex;justify-content:space-between;align-items:center;z-index:200;border:2px solid #ffe8c8}
-.product-modal{position:fixed;inset:0;background:#2b0a0a88;backdrop-filter:blur(24px);z-index:10000;display:none;align-items:end;justify-content:center}
-.product-modal.open{display:flex}
-.product-card{background:#fdf6ef;width:100%;max-width:480px;max-height:92vh;border-radius:24px 24px 0 0;overflow:hidden;display:flex;flex-direction:column;border:3px solid #7a1a1a}
-.product-img{width:100%;aspect-ratio:1.2/1;object-fit:cover;background:#fdf6ef}
-.product-info{padding:20px;overflow-y:auto;flex:1;background:#fdf6ef}
-.product-title{font-size:20px;font-weight:900;color:#2b1a0e}
-.product-desc{font-size:12px;color:#7a1a1a88;margin-top:6px}
-.option-item{display:flex;justify-content:space-between;align-items:center;background:#fff;border:2px solid #7a1a1a14;padding:14px 16px;border-radius:12px;cursor:pointer;margin-top:8px}
-.option-item.active{border-color:#7a1a1a;background:#7a1a1a;color:#ffe8c8}
-.option-check{width:24px;height:24px;border-radius:50%;border:2px solid #7a1a1a22;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900}
-.option-name{font-weight:800;font-size:13px}
-.option-price{font-weight:900;font-size:14px;color:#7a1a1a}
-.option-item.active .option-price{color:#ffe8c8}
-.qty-section{margin-top:16px;background:#fff;border:2px solid #7a1a1a14;border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
-.qty-btn{width:36px;height:36px;border-radius:10px;border:2px solid #7a1a1a14;background:#fff;font-weight:900;font-size:18px;cursor:pointer;color:#7a1a1a}
-.qty-num{font-weight:900;font-size:18px;min-width:30px;text-align:center;color:#2b1a0e}
-.add-to-cart-big{background:#7a1a1a;color:#ffe8c8;border:2px solid #ffe8c8;width:100%;padding:18px;border-radius:14px;font-weight:900;font-size:15px;cursor:pointer;margin-top:16px}
-.item{display:flex;gap:12px;background:#fff;padding:14px;border-radius:14px;border:2px solid #7a1a1a0f;align-items:center}
-.item img{width:64px;height:64px;border-radius:10px;object-fit:cover;background:#fdf6ef}
-.step{display:none}
-.step.active{display:block}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Cairo,sans-serif}
+body{background:#fff;color:#111;padding-bottom:90px}
+.header{text-align:center;padding:24px;border-bottom:1px solid #eee;position:sticky;top:0;background:#fff;z-index:10}
+.header h1{font-size:32px;font-weight:900}
+.item{display:flex;gap:12px;padding:14px;border-bottom:1px solid #f5f5f5}
+.item img{width:84px;height:84px;border-radius:16px;object-fit:cover;background:#f6f6f6}
+.info{flex:1}
+.info b{font-size:13.5px;font-weight:800;display:block}
+.info small{font-size:11px;color:#777;display:block;margin-top:2px}
+.price{font-weight:900;background:#f5f5f5;padding:6px 12px;border-radius:100px;height:fit-content;font-size:12px}
+.add{background:#111;color:#fff;border:0;padding:7px 14px;border-radius:100px;font-size:12px;font-weight:800;margin-top:8px;cursor:pointer}
+.cart{position:fixed;bottom:0;left:0;right:0;background:#111;color:#fff;padding:12px 5%;display:flex;justify-content:space-between;align-items:center;z-index:50}
+.cart button{background:#fff;color:#111;border:0;padding:10px 20px;border-radius:100px;font-weight:900;font-size:13px;cursor:pointer}
 </style>
 </head>
 <body>
-
-<div class="top-bar"><span>📞 MIX CHICKEN - 01015861991 - 16786</span><span>🔥 53 صنف - PREMIUM</span></div>
-
-<div class="header">
-<div class="logo"><div class="logo-icon">MIX</div><div>MIX CHICKEN<div style="font-size:13px;font-weight:900;color:#7a1a1a">PREMIUM<small>53 صنف - صور حقيقية - PREMIUM</small></div></div></div>
-<div class="cart" onclick="openCart()">🛒<span id="cartCount">0</span></div>
-</div>
-
-<div class="hero">
-<div><h2>🔥 MIX CHICKEN PREMIUM<br>53 صنف - صور حقيقية</h2><p>نفس الصنف يتجمع ×2 - صنف مختلف سطر جديد - سنجل ودبل</p></div>
-<div class="hero-badge">PREMIUM</div>
-</div>
-
-<div class="cats">
-<div class="cat active" data-filter="all">الكل 53</div>
-<div class="cat" data-filter="sand">🍔 ساندويتش</div>
-<div class="cat" data-filter="wrap">🌯 راب</div>
-<div class="cat" data-filter="single">🍗 سنجل</div>
-<div class="cat" data-filter="family">👨‍👩‍👧‍👦 عائلي 480</div>
-<div class="cat" data-filter="extreme">🔥 اكستريم</div>
-<div class="cat" data-filter="kids">👶 أطفال</div>
-<div class="cat" data-filter="add">➕ إضافات</div>
-</div>
-
-<div class="grid" id="grid"></div>
-
-<div class="product-modal" id="productModal" onclick="if(event.target===this)closeProduct()">
-<div class="product-card">
-<img class="product-img" id="pImg" src="">
-<div class="product-info">
-<div style="display:flex;justify-content:space-between;align-items:start"><div><div class="product-title" id="pTitle"></div><div class="product-desc" id="pDesc"></div></div><button onclick="closeProduct()" style="background:#fff;width:36px;height:36px;border-radius:10px;border:2px solid #7a1a1a14">✕</button></div>
-<div id="pOptions"></div>
-<div class="qty-section"><div style="font-weight:900;font-size:13px">الكمية</div><div style="display:flex;align-items:center;gap:10px"><button class="qty-btn" onclick="pQtyChange(-1)">−</button><span class="qty-num" id="pQty">1</span><button class="qty-btn" onclick="pQtyChange(1)">+</button></div></div>
-<button class="add-to-cart-big" onclick="confirmAddToCart()">🛒 إضافة للسلة - <span id="pTotalPrice">0 EGP</span></button>
-</div>
-</div>
-</div>
-
-<div class="modal" id="cartModal" onclick="if(event.target===this)closeCart()">
-<div class="sheet">
-<div class="sheet-head"><div><h3 style="font-weight:900;color:#7a1a1a" id="stepTitle">🛒 سلتك - اللي طلبته</h3><p style="font-size:11px;color:#7a1a1a88" id="stepDesc">نفس المنتج ×2 - منتج مختلف سطر جديد تحته</p></div><button onclick="closeCart()" style="background:#fdf6ef;width:40px;height:40px;border-radius:10px;border:2px solid #7a1a1a14">✕</button></div>
-
-<div class="sheet-body step active" id="step1">
-<div id="cartBody" style="display:flex;flex-direction:column;gap:12px"></div>
-<div style="background:#fff;padding:16px;border-radius:14px;margin-top:12px;border:2px solid #7a1a1a14">
-<div style="display:flex;justify-content:space-between;font-size:13px"><span>📦 إجمالي القطع:</span><span id="totalItems" style="font-weight:900">0 قطعة</span></div>
-<div style="display:flex;justify-content:space-between;font-size:13px;margin-top:8px"><span>🍗 أصناف مختلفة:</span><span id="totalTypes" style="font-weight:900">0 نوع</span></div>
-<div style="display:flex;justify-content:space-between;font-size:13px;margin-top:8px"><span>🛵 التوصيل:</span><span style="color:#7a1a1a;font-weight:900">يحدده الدليفري حسب المكان</span></div>
-<div style="display:flex;justify-content:space-between;font-weight:900;font-size:18px;border-top:2px solid #7a1a1a14;padding-top:12px;margin-top:12px;color:#7a1a1a"><span>💵 سعر الأكل:</span><span id="totalPrice">0 EGP</span></div>
-</div>
-</div>
-
-<div class="sheet-body step" id="step2">
-<div style="background:#fff;border:2px solid #7a1a1a14;border-radius:14px;padding:16px">
-<h4 style="font-size:14px;font-weight:900;margin-bottom:14px;color:#7a1a1a">📋 بيانات التوصيل</h4>
-<div style="margin:12px 0"><label style="font-size:13px;font-weight:800">👤 الاسم *</label><input class="inp" id="custName" placeholder="محمد أحمد"></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div><label style="font-size:13px;font-weight:800">📱 موبايل 1 *</label><input class="inp" id="custPhone" placeholder="010xxxxxxxx" type="tel"></div><div><label style="font-size:12px;color:#7a1a1a88">📱 موبايل 2</label><input class="inp" id="custPhone2" placeholder="011xxxxxxxx"></div></div>
-<div style="margin:14px 0"><label style="font-size:13px;font-weight:800">📍 العنوان *</label><textarea class="inp" id="custAddress" placeholder="المنطقة - الشارع - العمارة - الدور" rows="4"></textarea><div style="font-size:10px;color:#7a1a1a;margin-top:6px">📍 العنوان مهم عشان نحدد سعر التوصيل حسب المسافة</div></div>
-<div style="margin:12px 0"><label style="font-size:12px;color:#7a1a1a88">📝 ملاحظات</label><input class="inp" id="custNotes" placeholder="من غير شطة..."></div>
-</div>
-<div style="background:#7a1a1a;color:#ffe8c8;padding:16px;border-radius:14px;margin-top:12px;border:2px solid #ffe8c8">
-<div style="display:flex;justify-content:space-between;font-weight:900;font-size:16px"><span>💵 سعر الأكل:</span><span id="finalPrice">0 EGP</span></div>
-<div style="display:flex;justify-content:space-between;font-size:12px;color:#ffe8c8;margin-top:6px"><span>🛵 التوصيل:</span><span>يحدده الدليفري حسب عنوانك</span></div>
-<div style="font-size:11px;opacity:0.8;margin-top:6px" id="finalSummary">0 قطعة</div>
-</div>
-</div>
-
-<div class="sheet-foot">
-<div id="footerStep1"><button class="go2" id="btnConfirm" onclick="goToStep2()">✅ تأكيد الطلب - شوف اللي طلبته فوق</button></div>
-<div id="footerStep2" style="display:none"><div style="display:flex;gap:8px"><button onclick="backToStep1()" style="background:#fdf6ef;color:#7a1a1a;border:2px solid #7a1a1a14;padding:18px 20px;border-radius:14px;font-weight:900">← رجوع</button><button class="go" onclick="sendWhatsApp()">💬 إرسال واتساب - 01015861991</button></div></div>
-</div>
-
-</div>
-</div>
-
-<div class="bar">
-<div><div style="font-size:10px;opacity:0.8;color:#ffe8c8">سلتك - MIX CHICKEN</div><div style="font-weight:900;color:#ffe8c8"><span id="footerCount">0</span> قطعة - <b id="footerPrice">0 EGP</b></div></div>
-<button onclick="openCart()" style="background:#ffe8c8;color:#7a1a1a;border:none;padding:12px 22px;border-radius:12px;font-weight:900">🛒 السلة</button>
-</div>
-
+<div class="header"><h1>MIX CHICKEN</h1><p>53 ITEM PREMIUM MENU • 01015861991</p></div>
+<div id="menu" style="padding:0 5%;max-width:700px;margin:0 auto"></div>
+<div class="cart"><div id="info">السلة فاضية</div><button onclick="order()">اطلب واتساب</button></div>
 <script>
-const products=[
-{id:1,cat:'sand',name:'فاير زنجر Fire Zinger',desc:'حار نار - هاليبينو - شيدر',img:'fire-zinger.jpg',options:[{label:'سنجل Single',price:130},{label:'دبل Double',price:195,best:true}]},
-{id:2,cat:'sand',name:'سوبر ميكس Super Mix',desc:'مقرمشة ذهبية - موتزاريلا',img:'burger.jpg',options:[{label:'سنجل',price:140},{label:'دبل',price:205,best:true}]},
-{id:3,cat:'sand',name:'سوبر تيستي',img:'burger.jpg',desc:'كرسبي - ميكس - بيف بيكون',options:[{label:'سنجل',price:135},{label:'دبل',price:195,best:true}]},
-{id:4,cat:'sand',name:'تشيكن رانش',img:'burger.jpg',desc:'رانش - شيدر - بيف بيكون',options:[{label:'سنجل',price:135},{label:'دبل',price:195,best:true}]},
-{id:5,cat:'sand',name:'سويت شيلي',img:'burger.jpg',desc:'سويت شيلي - شيدر - تركي',options:[{label:'سنجل',price:135},{label:'دبل',price:195,best:true}]},
-{id:6,cat:'sand',name:'ميكس تشيز',img:'burger.jpg',desc:'3 أنواع جبنة',options:[{label:'سنجل',price:140},{label:'دبل',price:205,best:true}]},
-{id:7,cat:'sand',name:'فرايد تشيكن',img:'burger.jpg',desc:'فراخ مقلية - بيج صوص',options:[{label:'سنجل',price:135},{label:'دبل',price:195,best:true}]},
-{id:8,cat:'sand',name:'جولدن ميكس',img:'burger.jpg',desc:'جولدن صوص - الخطير',options:[{label:'سنجل',price:135},{label:'دبل',price:205,best:true}]},
-{id:9,cat:'sand',name:'مايتي زنجر',img:'fire-zinger.jpg',desc:'2 زنجر - عملاق',options:[{label:'عملاق',price:175}]},
-{id:10,cat:'sand',name:'زنجر راوند',img:'fire-zinger.jpg',desc:'زنجر - خس - مايونيز',options:[{label:'سنجل',price:120}]},
-{id:11,cat:'sand',name:'سوبر ميكس دوبل',img:'burger.jpg',desc:'دوبل - 2 قطعة',options:[{label:'دبل',price:205}]},
-{id:12,cat:'wrap',name:'تويستر كبير 65',img:'wrap.jpg',desc:'تورتيلا - كرسبي - بطاطس',options:[{label:'واحد',price:65},{label:'اتنين',price:115,best:true}]},
-{id:13,cat:'wrap',name:'تويستر وسط 60',img:'wrap.jpg',desc:'وسط - راب حقيقي',options:[{label:'واحد',price:60},{label:'اتنين',price:110,best:true}]},
-{id:14,cat:'wrap',name:'موتزاريلا تويستر 115',img:'wrap.jpg',desc:'استربس - موتزاريلا',options:[{label:'سنجل',price:115}]},
-{id:15,cat:'wrap',name:'تويستر 100',img:'wrap.jpg',desc:'كرسبي - سويسري - بيكون',options:[{label:'سنجل',price:100},{label:'كومبو',price:160,best:true}]},
-{id:16,cat:'wrap',name:'بيج راب 195',img:'wrap.jpg',desc:'صدور كرسبي كبيرة',options:[{label:'واحد',price:195}]},
-{id:17,cat:'wrap',name:'دبل راب 195',img:'wrap.jpg',desc:'2 استربس - فرايز',options:[{label:'واحد',price:195}]},
-{id:18,cat:'wrap',name:'كومبو 60',img:'family-480.jpg',desc:'بطاطس + كولا',options:[{label:'كومبو',price:60}]},
-{id:19,cat:'single',name:'سناك بوكس 130',img:'chicken-pieces.jpg',desc:'2 قطعة فراخ ذهبية',options:[{label:'بوكس',price:130}]},
-{id:20,cat:'single',name:'لايت بوكس 130',img:'chicken-pieces.jpg',desc:'3 استربس ذهبي',options:[{label:'بوكس',price:130}]},
-{id:21,cat:'single',name:'وجبة المصريين 165',img:'egyptians.jpg',desc:'2 فراخ - ريزو - صورتك الحقيقية',options:[{label:'وجبة',price:165,best:true}]},
-{id:22,cat:'single',name:'سمارت بوكس 165',img:'egyptians.jpg',desc:'فراخ + 2 استربس',options:[{label:'بوكس',price:165}]},
-{id:23,cat:'single',name:'دينر بوكس 195',img:'chicken-pieces.jpg',desc:'3 قطع فراخ',options:[{label:'3 قطع',price:195}]},
-{id:24,cat:'single',name:'دينر ستربس 195',img:'chicken-pieces.jpg',desc:'5 استربس',options:[{label:'5 استربس',price:195}]},
-{id:25,cat:'single',name:'سوبر دينر 240',img:'chicken-pieces.jpg',desc:'4 قطع ذهبية',options:[{label:'4 قطع',price:240}]},
-{id:26,cat:'single',name:'جامبو بوكس 385',img:'family-480.jpg',desc:'6 قطع - من البوكس العائلي 480',options:[{label:'6 قطع',price:385}]},
-{id:27,cat:'family',name:'فاميلي 7 قطع 415',img:'family-480.jpg',desc:'7 قطع',options:[{label:'7 قطع',price:415}]},
-{id:28,cat:'family',name:'فاميلي 8 قطع 480',img:'family-480.jpg',desc:'8 قطع - 480 - البوكس الأحمر - صورتك الحقيقية',options:[{label:'8 قطع',price:480,best:true}]},
-{id:29,cat:'family',name:'سوبر بوكس 9 قطع 540',img:'family-480.jpg',desc:'9 قطع',options:[{label:'9 قطع',price:540}]},
-{id:30,cat:'family',name:'تشيكن ميكس 595',img:'family-480.jpg',desc:'6 فراخ + 10 استربس',options:[{label:'ميكس',price:595}]},
-{id:31,cat:'family',name:'فاميلي ستربس 615',img:'family-480.jpg',desc:'10 استربس',options:[{label:'10 استربس',price:615}]},
-{id:32,cat:'family',name:'فاميلي ميل 12 - 685',img:'family-480.jpg',desc:'12 قطعة',options:[{label:'12 قطعة',price:685}]},
-{id:33,cat:'family',name:'اقتصادية 10 - 785',img:'family-480.jpg',desc:'10 قطع',options:[{label:'10 قطع',price:785}]},
-{id:34,cat:'family',name:'سوبر فاميلي 18 - 890',img:'family-480.jpg',desc:'18 قطعة',options:[{label:'18 قطعة',price:890}]},
-{id:35,cat:'family',name:'بارتي ميل 21 - 999',img:'family-480.jpg',desc:'21 قطعة',options:[{label:'21 قطعة',price:999,best:true}]},
-{id:36,cat:'extreme',name:'رايز ستربس 130',img:'egyptians.jpg',desc:'استربس - رز',options:[{label:'بوكس',price:130}]},
-{id:37,cat:'extreme',name:'سوبر تشيكن 165',img:'egyptians.jpg',desc:'Egyptians Meal',options:[{label:'بوكس',price:165}]},
-{id:38,cat:'extreme',name:'رايز ستربس 205',img:'egyptians.jpg',desc:'4 استربس - 400جرام رز',options:[{label:'كبير',price:205,best:true}]},
-{id:39,cat:'extreme',name:'رايز ميل 205',img:'egyptians.jpg',desc:'2 فراخ - رز',options:[{label:'بوكس',price:205}]},
-{id:40,cat:'extreme',name:'اكستريم ماكس 215',img:'egyptians.jpg',desc:'فراخ + زنجر - بطاطس - رز',options:[{label:'ماكس',price:215,best:true}]},
-{id:41,cat:'extreme',name:'بطاطس شيدر 70',img:'family-480.jpg',desc:'بطاطس - شيدر',options:[{label:'وسط',price:70},{label:'كبير',price:90,best:true}]},
-{id:42,cat:'kids',name:'ستربس كيدز 100',img:'chicken-pieces.jpg',desc:'2 استربس - فرايز - عصير',options:[{label:'وجبة',price:100}]},
-{id:43,cat:'kids',name:'تشيكن كيدز 100',img:'chicken-pieces.jpg',desc:'قطعة فراخ - فرايز - عصير',options:[{label:'وجبة',price:100}]},
-{id:44,cat:'add',name:'بيف بيكون 15',img:'family-480.jpg',desc:'إضافة',options:[{label:'واحدة',price:15},{label:'دبل',price:25,best:true}]},
-{id:45,cat:'add',name:'فرايز 35',img:'family-480.jpg',desc:'بطاطس مقرمشة',options:[{label:'وسط',price:35},{label:'كبير',price:55,best:true}]},
+var products=[
+{n:'فاير زنجر',p:130,img:'https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=300'},
+{n:'سوبر ميكس',p:140,img:'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=300'},
+{n:'سوبر تيستي',p:135,img:'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=300'},
+{n:'تشيكن رانش',p:135,img:'https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=300'},
+{n:'مايتي زنجر العملاق',p:175,img:'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=300'},
+{n:'بيج ماك تشيكن',p:165,img:'https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=300'},
+{n:'زنجر دبل',p:155,img:'https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=300'},
+{n:'كرسبي تشيكن برجر',p:125,img:'https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=300'},
+{n:'تشيكن فيليه',p:120,img:'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=300'},
+{n:'تويستر صغير',p:65,img:'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=300'},
+{n:'تويستر وسط',p:85,img:'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=300'},
+{n:'تويستر كبير',p:115,img:'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=300'},
+{n:'بيج راب',p:195,img:'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=300'},
+{n:'ميكس راب',p:125,img:'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=300'},
+{n:'زنجر راب حار',p:110,img:'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=300'},
+{n:'وجبة المصريين',p:165,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'سناك بوكس',p:130,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'دينر بوكس',p:195,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'كرسبي بوكس',p:175,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'بوب كورن بوكس',p:120,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'ميكس بوكس',p:185,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'ريزو بوكس',p:135,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'فاميلي 7 قطع',p:415,img:'https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300'},
+{n:'فاميلي 8 قطع',p:480,img:'https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300'},
+{n:'فاميلي 12 قطعة',p:695,img:'https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300'},
+{n:'فاميلي 16 قطعة',p:895,img:'https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300'},
+{n:'بارتي ميل 21 قطعة',p:999,img:'https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300'},
+{n:'سوبر فاميلي 24 قطعة',p:1150,img:'https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300'},
+{n:'جراند فاميلي 30 قطعة',p:1399,img:'https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300'},
+{n:'رايز ستربس',p:130,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'رايز جمبري',p:145,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'اكستريم ماكس',p:215,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'ميجا اكستريم',p:245,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'دبل اكستريم',p:275,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'تربل اكستريم',p:295,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'كومبو العيلة',p:550,img:'https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300'},
+{n:'كومبو الصحاب',p:650,img:'https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=300'},
+{n:'بطاطس صغير',p:25,img:'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=300'},
+{n:'بطاطس وسط',p:35,img:'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=300'},
+{n:'بطاطس كبير',p:50,img:'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=300'},
+{n:'بطاطس فاميلي',p:70,img:'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=300'},
+{n:'كول سلو صغير',p:20,img:'https://images.unsplash.com/photo-1625937286074-9ca519d5d9df?w=300'},
+{n:'كول سلو كبير',p:35,img:'https://images.unsplash.com/photo-1625937286074-9ca519d5d9df?w=300'},
+{n:'رز ريزو',p:30,img:'https://images.unsplash.com/photo-1603133879047-632d6bba1d08?w=300'},
+{n:'رز ريزو فاميلي',p:55,img:'https://images.unsplash.com/photo-1603133879047-632d6bba1d08?w=300'},
+{n:'عيش كيزر',p:5,img:'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300'},
+{n:'صوص شيدر',p:15,img:'https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=300'},
+{n:'صوص باربكيو',p:10,img:'https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=300'},
+{n:'بيبسي كان',p:20,img:'https://images.unsplash.com/photo-1624552184280-9e9631bbeee9?w=300'},
+{n:'بيبسي لتر',p:35,img:'https://images.unsplash.com/photo-1624552184280-9e9631bbeee9?w=300'},
+{n:'ميرندا / سفن',p:20,img:'https://images.unsplash.com/photo-1624552184280-9e9631bbeee9?w=300'},
+{n:'كيدز ميل',p:100,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'ناجتس 6 قطع',p:75,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'},
+{n:'استربس 3 قطع',p:85,img:'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=300'}
 ];
-
-let currentProduct=null,currentOption=null,currentQty=1;
-localStorage.removeItem('mixCart');localStorage.removeItem('mixCartNew');localStorage.removeItem('mixCartV3');localStorage.removeItem('mixCartFinal');localStorage.removeItem('mixCartStep');localStorage.removeItem('mixKhalafStyle');localStorage.removeItem('mixFixedFinal');localStorage.removeItem('mixJazaraKhalaf');
-let cart=JSON.parse(localStorage.getItem('mixChickenOnly')||'[]');
-
-function renderGrid(){
-  const grid=document.getElementById('grid');
-  let html='',lastCat='';
-  let cats={sand:'🍔 ساندويتشات - سنجل ودبل',wrap:'🌯 راب',single:'🍗 سنجل',family:'👨‍👩‍👧‍👦 عائلي - البوكس 480 الحقيقي',extreme:'🔥 اكستريم',kids:'👶 أطفال',add:'➕ إضافات'};
-  products.forEach(p=>{
-    if(p.cat!==lastCat){
-      html+=`<div class="label" data-cat="${p.cat}"><h3>${cats[p.cat]}</h3><span>${products.filter(x=>x.cat===p.cat).length} صنف</span></div>`;
-      lastCat=p.cat;
-    }
-    let minP=Math.min(...p.options.map(o=>o.price));
-    let maxP=Math.max(...p.options.map(o=>o.price));
-    let priceText=minP===maxP?`${minP} EGP`:`${minP} / ${maxP} EGP`;
-    html+=`<div class="card" data-cat="${p.cat}" onclick="openProduct(${p.id})"><img class="card-img" src="${p.img}" onerror="this.src='https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=400'"><div class="card-body"><b>${p.name}</b><small>${p.desc}</small><div class="row"><span class="price"><em>${priceText}</em></span><button class="add" onclick="event.stopPropagation();openProduct(${p.id})">+</button></div></div></div>`;
-  });
-  grid.innerHTML=html;
+var cart=[];
+function render(){
+var h='';
+for(var i=0;i<products.length;i++){
+var pr=products[i];
+h+='<div class=item><img src='+pr.img+'><div class=info><b>'+pr.n+'</b><small>'+pr.p+' جنيه</small><button class=add onclick=add('+i+')>أضف + '+pr.p+'</button></div><div class=price>'+pr.p+'</div></div>';
 }
-function openProduct(id){
-  currentProduct=products.find(p=>p.id===id);
-  currentQty=1;
-  currentOption=currentProduct.options[0];
-  document.getElementById('pImg').src=currentProduct.img;
-  document.getElementById('pTitle').innerText=currentProduct.name;
-  document.getElementById('pDesc').innerText=currentProduct.desc;
-  document.getElementById('pQty').innerText=1;
-  let optHtml='';
-  currentProduct.options.forEach((opt,idx)=>{
-    optHtml+=`<div class="option-item ${idx===0?'active':''}" onclick="selectOption(${idx})"><div style="display:flex;align-items:center;gap:10px"><div class="option-check">${idx===0?'✓':''}</div><div><div class="option-name">${opt.label}</div></div></div><div class="option-price">${opt.price} EGP</div></div>`;
-  });
-  document.getElementById('pOptions').innerHTML=`<div style="font-size:13px;font-weight:900;margin-top:12px;color:#7a1a1a">📏 اختار الحجم - سنجل ولا دبل؟</div>${optHtml}`;
-  updateProductPrice();
-  document.getElementById('productModal').classList.add('open');
+document.getElementById('menu').innerHTML=h;
 }
-function selectOption(idx){currentOption=currentProduct.options[idx];document.querySelectorAll('.option-item').forEach((el,i)=>{el.classList.toggle('active',i===idx);el.querySelector('.option-check').innerText=i===idx?'✓':'';});updateProductPrice();}
-function pQtyChange(d){currentQty+=d;if(currentQty<1)currentQty=1;if(currentQty>10)currentQty=10;document.getElementById('pQty').innerText=currentQty;updateProductPrice();}
-function updateProductPrice(){document.getElementById('pTotalPrice').innerText=(currentOption.price*currentQty)+' EGP';}
-function confirmAddToCart(){
-  let fullName=`${currentProduct.name} - ${currentOption.label}`;
-  let existing=cart.find(c=>c.fullName===fullName);
-  if(existing){existing.qty+=currentQty;}else{cart.push({id:Date.now()+Math.random(),fullName:fullName,baseName:currentProduct.name,option:currentOption.label,price:currentOption.price,qty:currentQty,img:currentProduct.img});}
-  localStorage.setItem('mixChickenOnly',JSON.stringify(cart));
-  updateUI();
-  closeProduct();
+function add(i){
+var pr=products[i];
+var f=null;
+for(var k=0;k<cart.length;k++){if(cart[k].n==pr.n) f=cart[k];}
+if(f) f.q++; else cart.push({n:pr.n,p:pr.p,q:1});
+upd();
 }
-function closeProduct(){document.getElementById('productModal').classList.remove('open');}
-function updateUI(){
-  let totalQty=0,totalPrice=0;
-  cart.forEach(i=>{totalQty+=parseInt(i.qty)||0;totalPrice+=(parseInt(i.price)||0)*(parseInt(i.qty)||0);});
-  document.getElementById('cartCount').innerText=totalQty;
-  document.getElementById('footerCount').innerText=totalQty;
-  document.getElementById('footerPrice').innerText=totalPrice+' EGP';
-  document.getElementById('totalItems').innerText=totalQty+' قطعة';
-  document.getElementById('totalTypes').innerText=cart.length+' نوع';
-  document.getElementById('totalPrice').innerText=totalPrice+' EGP';
-  document.getElementById('finalPrice').innerText=totalPrice+' EGP';
-  document.getElementById('finalSummary').innerText=`${totalQty} قطعة - ${cart.length} نوع - التوصيل حسب المكان`;
-  let body=document.getElementById('cartBody');
-  if(cart.length===0){
-    body.innerHTML='<div style="text-align:center;padding:30px;color:#7a1a1a66">🛒 سلتك فاضية<br>نفس المنتج ×2 - منتج مختلف سطر جديد تحته</div>';
-    document.getElementById('btnConfirm').style.display='none';
-  } else {
-    document.getElementById('btnConfirm').style.display='block';
-    let h='';
-    cart.forEach((it,idx)=>{
-      h+=`<div class="item"><img src="${it.img}" onerror="this.src='https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=100'"><div style="flex:1"><b style="font-size:13px;color:#2b1a0e">${it.baseName}</b><br><span style="font-size:11px;color:#7a1a1a;font-weight:800">${it.option}</span><br><span style="font-size:11px;color:#7a1a1a88">${it.price} EGP × ${it.qty} = ${it.price*it.qty} EGP</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div style="display:flex;gap:4px;align-items:center;background:#fdf6ef;border:2px solid #7a1a1a14;border-radius:10px;padding:3px 8px"><button onclick="changeQty(${idx},-1)" style="width:24px;height:24px;border-radius:50%;border:none;background:#fff;color:#7a1a1a">−</button><span style="color:#2b1a0e;font-weight:900;font-size:13px;min-width:20px;text-align:center">${it.qty}</span><button onclick="changeQty(${idx},1)" style="width:24px;height:24px;border-radius:50%;border:none;background:#7a1a1a;color:#ffe8c8">+</button></div><div style="color:#7a1a1a;font-weight:900;font-size:12px">${it.price*it.qty} EGP</div><button onclick="removeItem(${idx})" style="background:#ff00000f;color:#ff1a1a;border:none;padding:3px 10px;border-radius:8px;font-size:10px;font-weight:800">حذف</button></div></div>`;
-    });
-    body.innerHTML=h;
-  }
+function upd(){
+var t=0;var c=0;
+for(var i=0;i<cart.length;i++){t+=cart[i].p*cart[i].q;c+=cart[i].q;}
+document.getElementById('info').innerHTML=c==0?'السلة فاضية':'🛒 '+c+' صنف • '+t+' جنيه';
 }
-function changeQty(idx,d){if(cart[idx]){cart[idx].qty+=d;if(cart[idx].qty<=0)cart.splice(idx,1);localStorage.setItem('mixChickenOnly',JSON.stringify(cart));updateUI();}}
-function removeItem(idx){cart.splice(idx,1);localStorage.setItem('mixChickenOnly',JSON.stringify(cart));updateUI();}
-function openCart(){document.getElementById('cartModal').classList.add('open');backToStep1();updateUI();}
-function closeCart(){document.getElementById('cartModal').classList.remove('open');}
-function goToStep2(){
-  if(cart.length===0){alert('سلتك فاضية');return;}
-  document.getElementById('step1').classList.remove('active');
-  document.getElementById('step2').classList.add('active');
-  document.getElementById('footerStep1').style.display='none';
-  document.getElementById('footerStep2').style.display='block';
-  document.getElementById('stepTitle').innerText='📋 بيانات التوصيل';
-  document.getElementById('stepDesc').innerText='اكتب اسمك ورقمك وعنوانك - التوصيل حسب المكان';
+function order(){
+if(cart.length==0){alert('السلة فاضية');return;}
+var txt='طلب MIX CHICKEN%0A%0A';
+var tot=0;
+for(var i=0;i<cart.length;i++){txt+=cart[i].n+' x'+cart[i].q+' = '+(cart[i].p*cart[i].q)+' EGP%0A';tot+=cart[i].p*cart[i].q;}
+txt+='%0Aالاجمالي: '+tot+' جنيه%0Aالعنوان: ';
+window.open('https://wa.me/201015861991?text='+txt,'_blank');
 }
-function backToStep1(){
-  document.getElementById('step2').classList.remove('active');
-  document.getElementById('step1').classList.add('active');
-  document.getElementById('footerStep2').style.display='none';
-  document.getElementById('footerStep1').style.display='block';
-  document.getElementById('stepTitle').innerText='🛒 سلتك - اللي طلبته';
-  document.getElementById('stepDesc').innerText='نفس المنتج ×2 - منتج مختلف سطر جديد';
-}
-function sendWhatsApp(){
-  let name=document.getElementById('custName').value.trim();
-  let phone=document.getElementById('custPhone').value.trim();
-  let phone2=document.getElementById('custPhone2').value.trim();
-  let address=document.getElementById('custAddress').value.trim();
-  let notes=document.getElementById('custNotes').value.trim();
-  let err=false;
-  document.querySelectorAll('.inp').forEach(i=>i.classList.remove('err'));
-  if(!name){document.getElementById('custName').classList.add('err');err=true;}
-  if(!phone||phone.length<11){document.getElementById('custPhone').classList.add('err');err=true;}
-  if(!address||address.length<10){document.getElementById('custAddress').classList.add('err');err=true;}
-  if(err){alert('⚠️ اكمل: الاسم والموبايل والعنوان');return;}
-  let totalQty=cart.reduce((s,i)=>s+i.qty,0);
-  let totalPrice=cart.reduce((s,i)=>s+i.price*i.qty,0);
-  let msg=`🔥 *طلب جديد - MIX CHICKEN PREMIUM* 🔥\n📞 16786 - 01015861991\n━━━━━━━━━━━━━━\n\n👤 الاسم: ${name}\n📱 موبايل 1: ${phone}\n${phone2?`📱 موبايل 2: ${phone2}\n`:''}📍 العنوان: ${address}\n${notes?`📝 ملاحظات: ${notes}\n`:''}\n━━━━━━━━━━━━━━\n🍗 *الطلب (${cart.length} أنواع - ${totalQty} قطعة):*\n`;
-  cart.forEach((it,i)=>{msg+=`${i+1}. ${it.baseName} - ${it.option} × ${it.qty} = ${it.price*it.qty} EGP\n`;});
-  msg+=`\n━━━━━━━━━━━━━━\n📦 أنواع: ${cart.length}\n🔢 قطع: ${totalQty}\n💰 *سعر الأكل: ${totalPrice} EGP*\n🛵 التوصيل: *يحدده الدليفري حسب المكان*\n\n⏰ ${new Date().toLocaleString('ar-EG')}`;
-  window.open('https://wa.me/201015861991?text='+encodeURIComponent(msg),'_blank');
-}
-document.querySelectorAll('.cat').forEach(cat=>{
-  cat.addEventListener('click',()=>{
-    document.querySelectorAll('.cat').forEach(c=>c.classList.remove('active'));
-    cat.classList.add('active');
-    let f=cat.dataset.filter;
-    document.querySelectorAll('.card,.label').forEach(card=>{
-      if(f==='all')card.classList.remove('hidden');
-      else{
-        let cd=card.dataset.cat||'';
-        if(cd.includes(f))card.classList.remove('hidden');
-        else card.classList.add('hidden');
-      }
-    });
-  });
-});
-renderGrid();
-updateUI();
+render();
 </script>
 </body>
 </html>
